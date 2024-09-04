@@ -8,6 +8,6 @@
 
 ## Макет сайта
 
-![alt text](https://github.com/AnnaGonos/IS-web-2024-5sem/blob/main/picture/desktop-main.png)
+![макет сайта](https://github.com/AnnaGonos/IS-web-2024-5sem/blob/main/picture/desktop-main.png)
 
 
