@@ -81,6 +81,13 @@
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
+.header__menu-list {
+    z-index: 1;
+/*    Управлять порядком наложения блоков мы как раз и можем при помощи z-index https://doka.guide/css/z-index/*/
+}
+
+
+
 .header__contacts {
 }
 
