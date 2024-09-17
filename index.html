@@ -128,62 +128,86 @@
 <main>
 
     <section class="slider-slide">
+        <!-- Основной контейнер для слайдера -->
         <div class="slideshow-container">
+            <!-- Первый слайд -->
             <div class="mySlides fade">
                 <div class="numbertext">1 / 4</div>
                 <img src="images/slide-1.bmp" style="height:500px">
                 <div class="text-slide">Слайд 1</div>
             </div>
 
+            <!-- Второй слайд -->
             <div class="mySlides fade">
                 <div class="numbertext">2 / 4</div>
                 <img src="images/slide-2.bmp" style="height:500px">
                 <div class="text-slide">Слайд 2</div>
             </div>
 
+            <!-- Третий слайд -->
             <div class="mySlides fade">
                 <div class="numbertext">3 / 4</div>
                 <img src="images/slide-3.bmp" style="height:500px">
                 <div class="text-slide">Слайд 3</div>
             </div>
+
+            <!-- Четвертый слайд -->
             <div class="mySlides fade">
                 <div class="numbertext">4 / 4</div>
                 <img src="images/slide-4.bmp" style="height:500px">
                 <div class="text-slide">Слайд 4</div>
             </div>
-
         </div>
-        <br>
 
+        <!-- Контейнер для точек-индикаторов -->
+        <br>
         <div style="text-align:center">
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-                setTimeout(showSlides, 4000); // Change image every 4 seconds
-            }
-        </script>
     </section>
+
+    <script>
+        // Начальный индекс слайда
+        var slideIndex = 0;
+
+        // Функция, которая запускает показ слайдов
+        function showSlides() {
+            var i;
+            // Получаем все слайды
+            var slides = document.getElementsByClassName("mySlides");
+            // Получаем все точки-индикаторы
+            var dots = document.getElementsByClassName("dot");
+
+            // Скрываем все слайды
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Переходим к следующему слайду
+            slideIndex++;
+            // Если достигли конца, возвращаемся к первому слайду
+            if (slideIndex > slides.length) { slideIndex = 1 }
+
+            // Удаляем "active" класс у всех точек-индикаторов
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // Отображаем текущий слайд
+            slides[slideIndex - 1].style.display = "block";
+            // Применяем "active" класс к текущей точке-индикатору
+            dots[slideIndex - 1].className += " active";
+
+            // Вызываем функцию снова через 4 секунды
+            setTimeout(showSlides, 4000);
+        }
+
+        // Запускаем показ слайдов
+        showSlides();
+    </script>
 
 
     <hr class="divider">
