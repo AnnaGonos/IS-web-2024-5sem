@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <!-- Описать ключевые слова в метаинформации страницы, а также в описании страницы-->
@@ -14,7 +13,7 @@
     цветов, уникальных букетов и флористических композиций. Мы предоставляем качественные услуги по доставке цветов и
     оформлению мероприятий. Выбирайте самые красивые и свежие цветы для любого повода!">
     <link rel="stylesheet" href="styles/outlines.css">
-    <script src="menu-hamburger.js"></script>
+
     <script src="js/slider.js"></script>
 
     <!--metatextblock-->
@@ -22,106 +21,105 @@
 </head>
 <body>
 <header>
-    <section class="header-top">
-        <div class="block-info">
-            <div class="icon-text">
+    <section class="header__top">
+        <div class="header__info">
+            <div class="header__icon-text">
                 <img src="icons/clock.svg" alt="Часы" width="16" height="16">
-                <span class="text text-m">Время принятия заказов: с 8:00 до 20:00</span>
+                <span class="header__text header__text-icon">Время принятия заказов: с 8:00 до 20:00</span>
             </div>
-            <div class="icon-text">
-                <img src="icons/truck.svg" alt="Часы" width="16" height="16">
-                <span class="text text-m">Время доставки: с 10:00 до 22:00</span>
+            <div class="header__icon-text">
+                <img src="icons/truck.svg" alt="Грузовик" width="16" height="16">
+                <span class="header__text header__text-icon">Время доставки: с 10:00 до 22:00</span>
             </div>
         </div>
-        <div class="contact-info">
-            <span class="text text-l">+7 (914) 000-00-00</span>
-            <span class="text text-l">Whatsapp</span>
-            <span class="text text-l">Telegram</span>
+        <div class="header__contacts">
+            <span class="header__text header__text-contacts">+7 (914) 000-00-00</span>
+            <span class="header__text header__text-contacts">Whatsapp</span>
+            <span class="header__text header__text-contacts">Telegram</span>
         </div>
     </section>
+
     <hr class="divider">
 
-    <section class="header-middle">
-        <div class="logo-block">
-            <div class="site-nav-block">
-                <nav>
-                    <div class="logo-1">
+    <section class="header__middle">
+        <div class="header__logo-block">
+            <div class="header__site-nav-block">
+                <nav class="header__menu">
+                    <div class="header__logo">
                         <img src="images/logotype.png" alt="Лаванда">
                     </div>
-                    <div class="menu-logo">
-
-                        <ul>
-                            <li><a href="#">КАТАЛОГ <img src="icons/right-button.svg" alt="Вправо выпадающее меню"
-                                                         width="16" height="16"></a>
-                                <!-- первый уровень выпадающего списка -->
-                                <ul>
-                                    <li><a href="#">ОНЛАЙН-ВИТРИНА</a></li>
-                                    <li>
-                                        <a href="#" class="menu__link">
+                    <div class="header__menu-list">
+                        <ul class="header__list">
+                            <li class="header__list-item">
+                                <a class="header__link" href="#">КАТАЛОГ
+                                    <img class="header__arrow" src="icons/right-button.svg"
+                                         alt="Вправо выпадающее меню" width="16" height="16"></a>
+                                <ul class="header__dropdown-list">
+                                    <li class="header__dropdown-item"><a href="#">ОНЛАЙН-ВИТРИНА</a></li>
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
                                             БУКЕТ НА ЗАКАЗ
-                                            <img src="icons/right-button.svg" alt="Вправо выпадающее меню" width="16"
-                                                 height="16">
+                                            <img class="header__dropdown-arrow" src="icons/right-button.svg"
+                                                 alt="Вправо выпадающее меню" width="16" height="16">
                                         </a>
-                                        <!-- второй уровень выпадающего списка -->
-                                        <ul>
-                                            <li><a href="#">СЕЗОННЫЕ</a></li>
-                                            <li><a href="#">МОНО И ДУОБУКЕТЫ</a></li>
-                                            <li><a href="#">ЦВЕТОЧНЫЕ КОМПОЗИЦИИ</a></li>
-                                            <li><a href="#">СВАДЕБНЫЕ БУКЕТЫ</a></li>
-                                            <li><a href="#">СУХОЦВЕТЫ</a></li>
+                                        <ul class="header__dropdown-list header__dropdown-list_level2">
+                                            <li class="header__dropdown-item"><a href="#">СЕЗОННЫЕ</a></li>
+                                            <li class="header__dropdown-item"><a href="#">МОНО И ДУОБУКЕТЫ</a></li>
+                                            <li class="header__dropdown-item"><a href="#">ЦВЕТОЧНЫЕ КОМПОЗИЦИИ</a></li>
+                                            <li class="header__dropdown-item"><a href="#">СВАДЕБНЫЕ БУКЕТЫ</a></li>
+                                            <li class="header__dropdown-item"><a href="#">СУХОЦВЕТЫ</a></li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="#" class="menu__link">
+                                    <li class="header__dropdown-item">
+                                        <a class="header__dropdown-link" href="#">
                                             ДОБАВИТЬ К БУКЕТУ
-                                            <img src="icons/right-button.svg" alt="Вправо выпадающее меню" width="16"
-                                                 height="16">
+                                            <img class="header__dropdown-arrow" src="icons/right-button.svg"
+                                                 alt="Вправо выпадающее меню" width="16" height="16">
                                         </a>
-                                        <!-- второй уровень выпадающего списка -->
-                                        <ul>
-                                            <li><a href="#">ВАЗЫ</a></li>
-                                            <li><a href="#">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</a></li>
-                                            <li><a href="#">НАБОРЫ</a></li>
-                                            <li><a href="#">МЯГКИЕ ИГРУШКИ</a></li>
-                                            <li><a href="#">ОТКРЫТКИ</a></li>
+                                        <ul class="header__dropdown-list header__dropdown-list_level2">
+                                            <li class="header__dropdown-item"><a href="#">ВАЗЫ</a></li>
+                                            <li class="header__dropdown-item"><a href="#">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</a></li>
+                                            <li class="header__dropdown-item"><a href="#">НАБОРЫ</a></li>
+                                            <li class="header__dropdown-item"><a href="#">МЯГКИЕ ИГРУШКИ</a></li>
+                                            <li class="header__dropdown-item"><a href="#">ОТКРЫТКИ</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">В КОРЗИНАХ И КАШПО</a></li>
-                                    <li><a href="#">КОМНАТНЫЕ РАСТЕНИЯ</a></li>
-                                    <li><a href="#">ПОДАРКИ И ПРЕДМЕТЫ ДЛЯ ДОМА</a></li>
+                                    <li class="header__dropdown-item"><a href="#">В КОРЗИНАХ И КАШПО</a></li>
+                                    <li class="header__dropdown-item"><a href="#">КОМНАТНЫЕ РАСТЕНИЯ</a></li>
+                                    <li class="header__dropdown-item"><a href="#">ПОДАРКИ И ПРЕДМЕТЫ ДЛЯ ДОМА</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">БЛОГ</a></li>
-                            <li><a href="#">ОТЗЫВЫ</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">ДОСТАВКА</a></li>
+                            <li class="header__list-item"><a class="header__link" href="#">БЛОГ</a></li>
+                            <li class="header__list-item"><a class="header__link" href="#">ОТЗЫВЫ</a></li>
+                            <li class="header__list-item"><a class="header__link" href="#">FAQ</a></li>
+                            <li class="header__list-item"><a class="header__link" href="#">ДОСТАВКА</a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
 
-        <div class="search-and-actions">
-            <a href="#" class="search">
-                <div class="icon-search">
+        <div class="header__search-and-actions">
+            <a href="#" class="header__search-link">
+                <div class="header__search-icon">
                     <img src="icons/search.svg" alt="Поиск" width="22" height="22">
                 </div>
             </a>
 
-            <a href="#" class="search">
-                <div class="icon-basket">
+            <a href="#" class="header__search-link">
+                <div class="header__search-icon">
                     <img src="icons/heart.svg" alt="Избранное" width="22" height="22">
                 </div>
             </a>
 
-            <a href="#" class="search">
-                <div class="icon-basket">
+            <a href="#" class="header__search-link">
+                <div class="header__search-icon">
                     <img src="icons/shop.svg" alt="Корзина" width="22" height="22">
                 </div>
             </a>
 
-            <a href="#" class="search">
-                <div class="icon-basket">
+            <a href="#" class="header__search-link">
+                <div class="header__search-icon">
                     <img src="icons/people-circle.svg" alt="Личный кабинет" width="22" height="22">
                 </div>
             </a>
@@ -184,7 +182,7 @@
                 }
                 slides[slideIndex-1].style.display = "block";
                 dots[slideIndex-1].className += " active";
-                setTimeout(showSlides, 2000); // Change image every 2 seconds
+                setTimeout(showSlides, 4000); // Change image every 4 seconds
             }
         </script>
     </section>
@@ -192,110 +190,118 @@
 
     <hr class="divider">
 
-    <div class="weekly-new">
-        <span>НОВИНКИ</span><span>НОВИНКИ</span><span>НОВИНКИ</span><span>НОВИНКИ</span><span>НОВИНКИ</span>
-        <span>НОВИНКИ</span><span>НОВИНКИ</span><span>НОВИНКИ</span><span>НОВИНКИ</span><span>НОВИНКИ</span>
+    <div class="header__weekly-new">
+        <span class="header__weekly-new-text">НОВИНКИ</span><span class="header__weekly-new-text">НОВИНКИ</span>
+        <span class="header__weekly-new-text">НОВИНКИ</span><span class="header__weekly-new-text">НОВИНКИ</span>
+        <span class="header__weekly-new-text">НОВИНКИ</span><span class="header__weekly-new-text">НОВИНКИ</span>
+        <span class="header__weekly-new-text">НОВИНКИ</span><span class="header__weekly-new-text">НОВИНКИ</span>
+        <span class="header__weekly-new-text">НОВИНКИ</span><span class="header__weekly-new-text">НОВИНКИ</span>
+        <span class="header__weekly-new-text">НОВИНКИ</span><span class="header__weekly-new-text">НОВИНКИ</span>
     </div>
+
     <hr class="divider">
 
 
     <!-- Выбор недели -->
     <section class="weekly-selection">
-        <div class="block-selection-container">
-            <div class="block-selection-content">
-                <div class="block-selection-title-col">
+        <div class="weekly-selection__container">
+            <div class="weekly-selection__content">
+                <div class="weekly-selection__title-col">
                     <h2>ВЫБОР НЕДЕЛИ</h2>
                 </div>
-                <div class="block-selection-description-col">
-                    <p class="block-selection-description">
+                <div class="weekly-selection__description-col">
+                    <p class="weekly-selection__description">
                         Специальные предложения и лимитированные коллекции,&nbsp; доступные только в течение недели
                     </p>
                 </div>
             </div>
         </div>
-        <div class="weekly-products">
-            <div class="product-card">
-                <div class="product-card-image">
+
+        <div class="weekly-selection__products">
+            <div class="weekly-selection__product-card">
+                <div class="weekly-selection__product-image">
                     <img src="images/buket-7.bmp" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="product-card-description">
-                    <div class="card-title">
+                <div class="weekly-selection__product-description">
+                    <div class="weekly-selection__product-title">
                         БУКЕТ С ХРИЗАНТЕМАМИ №1
                     </div>
-                    <div class="card-price">
+                    <div class="weekly-selection__product-price">
                         <span>4 200 ₽</span>
                     </div>
                 </div>
-                <div class="button-block">
-                    <div class="button-item">
+                <div class="weekly-selection__product-button-block">
+                    <div class="weekly-selection__product-button-more">
                         ПОДРОБНЕЕ
                     </div>
-                    <div class="button-basket">
+                    <div class="weekly-selection__product-button-basket">
                         В КОРЗИНУ
                     </div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-card-image">
+
+            <div class="weekly-selection__product-card">
+                <div class="weekly-selection__product-image">
                     <img src="images/buket-8.bmp" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="product-card-description">
-                    <div class="card-title">
+                <div class="weekly-selection__product-description">
+                    <div class="weekly-selection__product-title">
                         БУКЕТ С ХРИЗАНТЕМАМИ №2
                     </div>
-                    <div class="card-price">
+                    <div class="weekly-selection__product-price">
                         <span>1 000 ₽</span>
                     </div>
                 </div>
-                <div class="button-block">
-                    <div class="button-item">
+                <div class="weekly-selection__product-button-block">
+                    <div class="weekly-selection__product-button-more">
                         ПОДРОБНЕЕ
                     </div>
-                    <div class="button-basket">
+                    <div class="weekly-selection__product-button-basket">
                         В КОРЗИНУ
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <hr class="divider">
 
     <!-- Онлайн-витрина -->
     <section class="online-showcase">
         <h2>ОНЛАЙН-ВИТРИНА</h2>
 
-        <div class="online-showcase-block">
-            <div class="product-card">
-                <div class="product-card-image">
+        <div class="online-showcase-content">
+            <div class="weekly-selection__product-card">
+                <div class="weekly-selection__product-image">
                     <img src="images/buket-5.bmp" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="product-card-description">
-                    <div class="card-title">
+                <div class="weekly-selection__product-description">
+                    <div class="weekly-selection__product-title">
                         МОНОБУКЕТ СИНИХ ХРИЗАНТЕМ
                     </div>
-                    <div class="card-price">
+                    <div class="weekly-selection__product-price">
                         <span>1 700 ₽</span>
                         <span><del>2 000 ₽</del></span>
                     </div>
                 </div>
-                <div class="button-block">
-                    <div class="button-item">
+                <div class="weekly-selection__product-button-block">
+                    <div class="weekly-selection__product-button-more">
                         ПОДРОБНЕЕ
                     </div>
-                    <div class="button-basket">
+                    <div class="weekly-selection__product-button-basket">
                         В КОРЗИНУ
                     </div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-card-image">
+            <div class="weekly-selection__product-card">
+                <div class="weekly-selection__product-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/2389272/2a0000017463575c49498522d10e9e4e4790/XXXL" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="product-card-description">
-                    <div class="card-title">
+                <div class="weekly-selection__product-description">
+                    <div class="weekly-selection__product-title">
                         БОЛЬШОЙ БУКЕТ ХРИЗАНТЕМ
                     </div>
-                    <div class="card-price">
+                    <div class="weekly-selection__product-price">
                         <span>
                             3 000 ₽
                         </span>
@@ -304,24 +310,24 @@
                         </span>
                     </div>
                 </div>
-                <div class="button-block">
-                    <div class="button-item">
+                <div class="weekly-selection__product-button-block">
+                    <div class="weekly-selection__product-button-more">
                         ПОДРОБНЕЕ
                     </div>
-                    <div class="button-basket">
+                    <div class="weekly-selection__product-button-basket">
                         В КОРЗИНУ
                     </div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-card-image">
+            <div class="weekly-selection__product-card">
+                <div class="weekly-selection__product-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/2804357/2a0000017463576b11b1b81dc1947cd245ea/XXXL" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="product-card-description">
-                    <div class="card-title">
+                <div class="weekly-selection__product-description">
+                    <div class="weekly-selection__product-title">
                         СБОРНЫЙ БУКЕТ С ОРХИДЕЯМИ
                     </div>
-                    <div class="card-price">
+                    <div class="weekly-selection__product-price">
                         <span>
                             1 900 ₽
                         </span>
@@ -330,24 +336,24 @@
                         </span>
                     </div>
                 </div>
-                <div class="button-block">
-                    <div class="button-item">
+                <div class="weekly-selection__product-button-block">
+                    <div class="weekly-selection__product-button-more">
                         ПОДРОБНЕЕ
                     </div>
-                    <div class="button-basket">
+                    <div class="weekly-selection__product-button-basket">
                         В КОРЗИНУ
                     </div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-card-image">
+            <div class="weekly-selection__product-card">
+                <div class="weekly-selection__product-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/10328405/2a0000018ed4cf6d4a6d513568f938869d72/XXXL" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="product-card-description">
-                    <div class="card-title">
+                <div class="weekly-selection__product-description">
+                    <div class="weekly-selection__product-title">
                         СЕЗОННЫЙ БУКЕТ №2
                     </div>
-                    <div class="card-price">
+                    <div class="weekly-selection__product-price">
                         <span>
                             2 000 ₽
                         </span>
@@ -356,166 +362,164 @@
                         </span>
                     </div>
                 </div>
-                <div class="button-block">
-                    <div class="button-item">
+                <div class="weekly-selection__product-button-block">
+                    <div class="weekly-selection__product-button-more">
                         ПОДРОБНЕЕ
                     </div>
-                    <div class="button-basket">
+                    <div class="weekly-selection__product-button-basket">
                         В КОРЗИНУ
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     <hr class="divider">
 
     <!-- Каталог -->
     <section class="catalog">
         <h2>КАТАЛОГ</h2>
-        <div class="category">
-            <div class="category-item">
-                <div class="category-img">
+        <div class="catalog__categories">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="images/buket-all.jpg" alt="Фото для категории все букеты">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     ВСЕ БУКЕТЫ
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="images/buket-1.jpg" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     ОНЛАЙН-ВИТРИНА
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="images/buket-2.jpg" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     СЕЗОННЫЕ
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="images/buket-5.bmp" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     МОНО И ДУОБУКЕТЫ
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/2761244/2a0000017463576064fda483fbc254a25150/XXXL" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     ЦВЕТОЧНЫЕ КОМПОЗИЦИИ
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/2390040/2a00000174635767858ab48bfd618357c63e/XXXL" alt="Девушка со свадебной композицией">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     СВАДЕБНЫЕ БУКЕТЫ
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/927353/2a000001854921cb12b30c2996cc2ebc1276/XXXL" alt="Девушка с композицией сухоцветов">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     СУХОЦВЕТЫ
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/2447509/2a00000174635781945fce7ad1ae93da5943/XXXL" alt="Добавить к букету">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     ДОБАВИТЬ К БУКЕТУ
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/2776652/2a00000174635753d2ebf54a9ec83a120b77/XXXL" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     В КОРЗИНАХ И КАШПО
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="images/buket-6.bmp" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     КОМНАТНЫЕ РАСТЕНИЯ
                 </div>
             </div>
-            <div class="category-item">
-                <div class="category-img">
+            <div class="catalog__category-item">
+                <div class="catalog__category-image">
                     <img src="https://i.pinimg.com/736x/50/60/07/5060071b200c997fc58b5c7f5a72d753--retail-store-design-retail-stores.jpg" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="category-description">
+                <div class="catalog__category-description">
                     ПОДАРКИ И ПРЕДМЕТЫ ДЛЯ ДОМА
                 </div>
             </div>
         </div>
-
     </section>
 
     <hr class="divider">
     <!--    О нас-->
     <section class="about-us">
-        <div class="about-us-block-1">
-            <div class="about-us-selection-col1">
+        <div class="about-us__container">
+            <div class="about-us__left-column">
                 <h2>О НАС</h2>
-                <div class="container-about-us">
-                    <div class="column-about-us">
-                        <div class="icon-text">
+                <div class="about-us__features">
+                    <div class="about-us__feature">
+                        <div class="header__icon-text">
                             <img src="icons/menu-button.svg" alt="Корзина" width="22" height="22">
-                            <span class="text text-r"><strong>Широкий ассортимент</strong></span>
+                            <span class="header__text text-title"><strong>Широкий ассортимент</strong></span>
                         </div>
-                        <div class="description-about-us">
+                        <div class="about-us__feature-description">
                             Более 50 наименований цветов и растений. Разнообразие букетов, композиций и подарочных наборов
                             на любой вкус. Так же имеется "онлайн-витрина" с готовыми, свежесобранными букетами для
                             экстренных заказов.
                         </div>
                     </div>
-                    <div class="column-about-us">
-                        <div class="icon-text">
+                    <div class="about-us__feature">
+                        <div class="header__icon-text">
                             <img src="icons/stars.svg" alt="Корзина" width="22" height="22">
-                            <span class="text text-r"><strong>Высокий уровень сервиса</strong></span>
+                            <span class="header__text text-title"><strong>Высокий уровень сервиса</strong></span>
                         </div>
-                        <div class="description-about-us">
+                        <div class="about-us__feature-description">
                             Оперативная обработка и доставка заказов, а так же вежливый и клиентоориентированный персонал.
                         </div>
                     </div>
-                    <div class="column-about-us">
-                        <div class="icon-text">
+                    <div class="about-us__feature">
+                        <div class="header__icon-text">
                             <img src="icons/person-heart.svg" alt="Корзина" width="22" height="22">
-                            <span class="text text-r"><strong>Индивидуальный подход</strong></span>
+                            <span class="header__text text-title"><strong>Индивидуальный подход</strong></span>
                         </div>
-                        <div class="description-about-us">
+                        <div class="about-us__feature-description">
                             Наши профессиональные флористы с любовью и вниманием относятся к созданию каждого букета или
                             композиции. Каждое творение неповторимо и уникально, ведь мы вкладываем частичку своей души в
                             каждую работу.
                         </div>
                     </div>
-                    <div class="column-about-us">
-                        <div class="icon-text">
+                    <div class="about-us__feature">
+                        <div class="header__icon-text">
                             <img src="icons/basket-add.svg" alt="Корзина" width="22" height="22">
-                            <span class="text text-r"><strong>Удобство заказа</strong></span>
+                            <span class="header__text text-title"><strong>Удобство заказа</strong></span>
                         </div>
-                        <div class="description-about-us">
+                        <div class="about-us__feature-description">
                             Несколько вариантов доставки (курьером, самовывоз).
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="about-us-selection-col2"> <!-- фото магазин-->
+            <div class="about-us__right-column"> <!-- фото магазин-->
                 <img src="https://avatars.mds.yandex.net/get-altay/1987173/2a000001746357717f3c659ebb67616e2bfc/XXXL"
                      alt="Девушка с букетом">
             </div>
@@ -523,10 +527,10 @@
     </section>
 
     <section class="about-us-address">
-        <div class="address-map-selection-col1">
+        <div class="about-us-address__left-column">
             <h3>КАК НАС НАЙТИ?</h3>
 
-            <div class="column-about-us-address">
+            <div class="about-us-address__info">
                 <h3>
                     Партизанск, ул. Замараева, 5
                 </h3>
@@ -538,55 +542,54 @@
             </div>
         </div>
 
-        <div class="address-map-selection-col2">
-            <div id="map">
+        <div class="about-us-address__right-column">
+            <div id="about-us-address__map">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A04372f220e817e42113272e1b01f2c7800bf6b0612480513330a82c87dc3592e&amp;width=650&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
-
             </div>
         </div>
     </section>
     <hr class="divider">
 
     <!-- Ответы на вопросы -->
-    <section class="faq-block">
-        <div class="container">
+    <section class="faq">
+        <div class="faq__container">
             <h2>FAQ</h2>
 
-            <div class="faq">
-                <div class="faq-item">
-                    <a class="faq-question">КАК НУЖНО УХАЖИВАТЬ ЗА БУКЕТОМ?</a>
-                    <div class="faq-answer">
+            <div class="faq__content">
+                <div class="faq__item">
+                    <a class="faq__question">КАК НУЖНО УХАЖИВАТЬ ЗА БУКЕТОМ?</a>
+                    <div class="faq__answer">
                         <p>Ответ 1</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <a class="faq-question">ВОПРОС 2?</a>
-                    <div class="faq-answer">
+                <div class="faq__item">
+                    <a class="faq__question">ВОПРОС 2?</a>
+                    <div class="faq__answer">
                         <p>Ответ 2</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <a class="faq-question">ВОПРОС 3?</a>
-                    <div class="faq-answer">
+                <div class="faq__item">
+                    <a class="faq__question">ВОПРОС 3?</a>
+                    <div class="faq__answer">
                         <p>Ответ 3</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <a class="faq-question">ВОПРОС 4?</a>
-                    <div class="faq-answer">
+                <div class="faq__item">
+                    <a class="faq__question">ВОПРОС 4?</a>
+                    <div class="faq__answer">
                         <p>Ответ 4</p>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <a class="faq-question">ВОПРОС 5?</a>
-                    <div class="faq-answer">
+                <div class="faq__item">
+                    <a class="faq__question">ВОПРОС 5?</a>
+                    <div class="faq__answer">
                         <p>Ответ 5</p>
                     </div>
                 </div>
             </div>
         </div>
         <script>
-        const items = document.querySelectorAll(".faq-question");
+        const items = document.querySelectorAll(".faq__question");
         function toggleAccordion(){
             this.classList.toggle('active');
             this.nextElementSibling.classList.toggle('active');
@@ -594,6 +597,10 @@
 
         items.forEach(item => item.addEventListener('click', toggleAccordion));
         </script>
+        <!-- находим все элементы с классом faq-question и сохраняем их в переменной items.затем  определяем функцию
+        toggleAccordion(), которая при клике на вопрос (элемент с классом faq-question) добавляет или удаляет класс
+        active у этого элемента и у следующего за ним элемента (ответ, элемент с классом faq-answer).
+   - В конце скрипта добавляем обработчик клика на каждый элемент faq-question, вызывая функцию toggleAccordion(). -->
     </section>
 
 
@@ -601,33 +608,37 @@
 
 
     <section class="reviews">
-        <div class="reviews-selection-col1">
-            <div style="width:750px;height:600px;overflow:hidden;position:relative;">
-                <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:18px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/192730334640?comments"></iframe>
-                <a href="https://yandex.ru/maps/org/lavanda/192730334640/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:14px;font-weight:550;font-family:'Circe Light', Arial, sans-serif;position:absolute;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;box-sizing:border-box">Магазин "Лаванда" на карте Партизанска — Яндекс Карты</a>
+        <div class="reviews__column-1">
+            <div class="reviews__map" style="width:750px;height:600px;overflow:hidden;position:relative;">
+                <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:18px;box-sizing:border-box"
+                        src="https://yandex.ru/maps-reviews-widget/192730334640?comments"></iframe>
+                <a href="https://yandex.ru/maps/org/lavanda/192730334640/" target="_blank" style="box-sizing:border-box;
+                text-decoration:none;color:#b3b3b3;font-size:14px;font-weight:550;font-family:'Circe Light', Arial, sans-serif;
+                position:absolute;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;
+                max-height:14px;white-space:nowrap;box-sizing:border-box">Магазин "Лаванда" на карте Партизанска — Яндекс Карты</a>
             </div>
         </div>
-        <div class="reviews-selection-col2">
+        <div class="reviews__column-2">
             <div class="reviews-title">
                 <h2>ОТЗЫВЫ КЛИЕНТОВ</h2>
             </div>
 
-            <div class="reviews-block-img">
+            <div class="reviews__rating-item">
                 <img src="images/yandex.jpg" alt="Оценка с Яндекса" width="100px" height="100%">
-                <span class="star">
-                    4,3 из 5
+                <span class="reviews__rating-value">
+                    4.3 из 5
                 </span>
             </div>
-            <div class="reviews-block-img">
+            <div class="reviews__rating-item">
                 <img src="images/2ГИС.png" alt="Оценка с 2ГИС" width="100px" height="100%">
-                <span class="star">
+                <span class="reviews__rating-value">
                     5 из 5
                 </span>
             </div>
-            <div class="reviews-block-img">
+            <div class="reviews__rating-item">
                 <img src="images/google.png" alt="Оценка с Google" width="100px" height="100%">
-                <span class="star">
-                    4,6 из 5
+                <span class="reviews__rating-value">
+                    4.6 из 5
                 </span>
             </div>
         </div>
@@ -635,57 +646,56 @@
 
 
     <section class="developer-info">
-        <div class="block-selection-content">
+        <div class="weekly-selection__content">
             <h2>РАЗРАБОТЧИК ДАННОГО САЙТА</h2>
 
-
             <!-- Текст внутри <em> по умолчанию выделяется курсивом при помощи font-style: italic.-->
-            <div class="quote">
-                <p>Наша <strong>формула успеха</strong>:
-                    Качество<sup>2</sup> + Сервис<sup>2</sup> = ❤<sup>2</sup></p>
-                <p><em>"Цветы — это поцелуи природы для нашей души." </em> <sub> - Лионель Сэндерс</sub></p>
-            </div>
+            <blockquote class="developer-info__quote">
+                <p>
+                    Наша <strong>формула успеха</strong>:
+                    Качество<sup>2</sup> + Сервис<sub>2</sub> = ❤️<sup>2</sup>
+                </p>
+                <p>
+                    <em>"Цветы — это поцелуи природы для нашей души."</em> - Лионель Сэндерс
+                </p>
+            </blockquote>
         </div>
-        <div class="container-dev">
-            <div class="column-dev">
+        <div class="developer-info__container">
+            <div class="developer-info__column">
                 <!-- Содержимое первой колонки -->
                 <img src="images/dev-img.jpg" alt="Фотография разработчика">
 
             </div>
 
-            <div class="column-dev">
+            <div class="developer-info__column">
                 <!-- Содержимое второй колонки -->
                 <p>Привет! Меня зовут Гонос Анна. Данный сайт был разработан мной, студентом 3 курса по направлению
-                    "Web-разработка"</a>. Это мой <b> первый</b> практический проект, выполненный в рамках обучения.</p>
-                <p>Я надеюсь, что вам понравится результат моей работы. Если у вас есть какие-либо
-                    <del>вопросы</del>
-                    предложения, пожалуйста, свяжитесь со мной через
-                    <ins>следующие мессенджеры:</ins>
-                    <br>
+                    "Web-разработка". Это мой <b>первый</b> практический проект, выполненный в рамках обучения.</p>
+                <p>Я надеюсь, что вам понравится результат моей работы. Если у вас есть какие-либо <del>вопросы</del>
+                    предложения, пожалуйста, свяжитесь со мной через <ins>следующие мессенджеры:</ins></p>
 
-                <div class="icon-dev">
+                <div class="developer-info__contact">
                     <a href="https://t.me/gonosanna"><img src="icons/telegram.svg" alt="Ссылка на Telegram"></a>
                     <a href="https://vk.com/gonosanna"><img src="icons/vk.svg" alt="Ссылка на vk"></a>
-                    <a href="https://chatwith.io/s/789681393338"><img src="icons/whatsapp.svg" alt="Ссылка на WhatsApp" width="22"
-                                                                      height="22"></a>
+                    <a href="https://chatwith.io/s/789681393338"><img src="icons/whatsapp.svg" alt="Ссылка на WhatsApp"
+                                                                      width="22" height="22"></a>
                 </div>
 
 
             </div>
-            <div class="column-dev">
+            <div class="developer-info__column">
                 <!-- Содержимое третьей колонки -->
                 <p>При создании сайта я использовала HTML, CSS и JavaScript, стараясь сделать интерфейс интуитивно
-                    понятным и привлекательным для посетителей.
-                </p>
-                <div class="ascii-art">
+                    понятным и привлекательным для посетителей.</p>
+                <div class="developer-info__ascii-art">
   <pre>
  _________________________________________________________________________________________
               </pre>
                 </div>
-                <code>
-                    &lt;<span>p</span>&gt; Вставляем тег p в виде простого текста &lt;<span>/p</span>&gt;
-                </code>
-                <div class="ascii-art">
+                <div class="developer-info__code">
+                    <code>&lt;<span>p</span>&gt; Вставляем тег p в виде простого текста &lt;<span>/p</span>&gt;</code>
+                </div>
+                <div class="developer-info__ascii-art">
   <pre>
 \__________________________       ________________________________________________________/
                            |     /
@@ -711,33 +721,33 @@
     
 </main>
 
-<footer>
-    <div class="footer-block">
-        <div class="footer-left">
-            <div class="logo-2">
+<footer class="footer">
+    <div class="footer__content">
+        <div class="footer__left-column">
+            <div class="footer__logo">
                 <img src="images/logo.png" alt="Логотип Лаванда">
             </div>
 
-            <div class="icon-text">
+            <div class="header__icon-text">
                 <img src="icons/map.svg" alt="Часы" width="16" height="16">
-                <span class="text text-black"><a class="dashed" href="https://yandex.ru/maps/-/CDDCmGp2">ул. Замараева, 5, Партизанск</a></span>
+                <span class="header__text text-black"><a class="footer__nav-link" href="https://yandex.ru/maps/-/CDDCmGp2">ул. Замараева, 5, Партизанск</a></span>
             </div>
 
-            <div class="icon-footer">
+            <div class="footer__social-links">
                 <a href="https://chatwith.io/s/789681393338"><img src="icons/whatsapp.svg" alt="Ссылка на WhatsApp"></a>
                 <a href="https://t.me/gonosanna"><img src="icons/telegram.svg" alt="Ссылка на Telegram"></a>
                 <a href="https://vk.com/gonosanna"><img src="icons/vk.svg" alt="WhatsApp" ></a>
             </div>
         </div>
-        <div class="footer-right">
-            <span class="text text-black"><a class="dashed" href="#">ГЛАВНАЯ</a></span>
-            <span class="text text-black"><a class="dashed" href="#">КАТАЛОГ</a></span>
-            <span class="text text-black"><a class="dashed" href="#">О НАС</a></span>
-            <span class="text text-black"><a class="dashed" href="#">КОНТАКТЫ</a></span>
+        <div class="footer__right-column">
+            <span><a class="footer__nav-link" href="#">ГЛАВНАЯ</a></span>
+            <span><a class="footer__nav-link" href="#">КАТАЛОГ</a></span>
+            <span><a class="footer__nav-link" href="#">О НАС</a></span>
+            <span><a class="footer__nav-link" href="#">КОНТАКТЫ</a></span>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2018 - 2023 Цветочный магазин "Лаванда". Все права защищены.</p>
+    <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2018 - 2023 Цветочный магазин "Лаванда". Все права защищены.</p>
     </div>
 </footer>
 </body>

@@ -19,7 +19,7 @@
     src: url('fonts/Circe/Circe-Bold.ttf') format('truetype');
 }
 
-.header-top {
+.header__top {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -29,7 +29,7 @@
     /*padding-right: 20px;*/
 }
 
-.header-middle {
+.header__middle {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -46,18 +46,18 @@
 
 }
 
-.block-info {
+.header__info {
     display: flex;
     gap: 20px;
 }
 
-.icon-text {
+.header__icon-text {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.icon-text .text-m {
+.header__icon-text .header__text-icon {
     margin-left: 10px;
     color: #535353;
     font-size: 13px;
@@ -65,7 +65,7 @@
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.icon-text .text-black {
+.header__icon-text .text-black {
     margin-left: 10px;
     color: #000000;
     font-size: 13px;
@@ -73,7 +73,7 @@
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.icon-text .text-r {
+.header__icon-text .text-title {
     margin-left: 20px;
     color: #000000;
     font-size: 16px;
@@ -81,10 +81,10 @@
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.contact-info {
+.header__contacts {
 }
 
-.contact-info .text-l {
+.header__contacts .header__text-contacts {
     margin-left: 10px;
     color: #535353;
     font-size: 13px;
@@ -92,14 +92,14 @@
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.logo-block {
+.header__logo-block {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
 }
 
-.logo-1 {
+.header__logo {
     width: 100px;
     height: 100px;
     padding-bottom: 10px;
@@ -107,7 +107,7 @@
     padding-right: 10px;
 }
 
-.logo-1 img {
+.header__logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -198,7 +198,7 @@ nav ul ul ul {
     margin-left: 5px;
 }
 
-.search-and-actions {
+.header__search-and-actions {
     width: 15%;
     display: flex;
     flex-direction: row;
@@ -206,7 +206,7 @@ nav ul ul ul {
     justify-content: flex-end;
 }
 
-.search {
+.header__search-link {
     padding-left: 20px;
 }
 
@@ -296,7 +296,7 @@ nav ul ul ul {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-    .text {font-size: 11px}
+    .header__text {font-size: 11px}
 }
 
 /* 2 раздел */
@@ -304,7 +304,7 @@ nav ul ul ul {
     padding: 30px;
 }
 
-.block-selection-content {
+.weekly-selection__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -312,12 +312,12 @@ nav ul ul ul {
     color: #000000;
 }
 
-.block-selection-title-col {
+.weekly-selection__title-col {
     flex-basis: 40%;
     max-width: 40%;
 }
 
-.block-selection-description-col {
+.weekly-selection__description-col {
     flex-basis: 60%;
     max-width: 60%;
 }
@@ -345,29 +345,32 @@ h3 {
     color: #000000;
 }
 
-.block-selection-description {
+.weekly-selection__description {
     font-size: 14px;
     font-weight: 550;
     font-family: 'Circe Light', Arial, sans-serif;
     color: #000000;
 }
 
-.weekly-products {
+.weekly-selection__products {
     background-color: #ffffff;
 
 }
 
-.weekly-products {
+.weekly-selection__products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
 
-.weekly-new {
+.header__weekly-new {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
+
+.header__weekly-new-text {
     font-size: 14px;
     font-weight: 150;
     font-family: 'Circe Light', Arial, sans-serif;
@@ -379,30 +382,30 @@ h3 {
     padding: 30px;
 }
 
-.online-showcase-block {
+.online-showcase-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
 }
 
-.product-card {
+.weekly-selection__product-card {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
 }
 
-.product-card-image {
+.weekly-selection__product-image {
 }
 
-.product-card-image img {
+.weekly-selection__product-image img {
     object-fit: cover;
     width: 250px;
     height: 350px;
     border-radius: 18px;
 }
 
-.product-card-description {
+.weekly-selection__product-description {
     padding: 20px 0;
     font-size: 14px;
     font-weight: 150;
@@ -410,11 +413,11 @@ h3 {
     color: #000000;
 }
 
-.product-card-description .card-title {
+.weekly-selection__product-description .weekly-selection__product-title {
     font-family: 'Circe Regular', Arial, sans-serif;
 }
 
-.product-card-description .card-price {
+.weekly-selection__product-description .weekly-selection__product-price {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -423,7 +426,7 @@ h3 {
     padding-top: 5px;
 }
 
-.button-block {
+.weekly-selection__product-button-block {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -434,14 +437,14 @@ h3 {
 
 }
 
-.button-item {
+.weekly-selection__product-button-more {
     padding: 10px 15px;
     border-radius: 18px;
     border: 1px solid #000000;
     margin-right: 10px;
 }
 
-.button-basket {
+.weekly-selection__product-button-basket {
     padding: 10px 15px;
     border-radius: 18px;
     background-color: #6C4795;
@@ -460,13 +463,13 @@ h3 {
     padding: 30px;
 }
 
-.category {
+.catalog__categories {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
 }
 
-.category-item {
+.catalog__category-item {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -474,14 +477,14 @@ h3 {
     align-items: center;
 }
 
-.category-item .category-img img {
+.catalog__category-item .catalog__category-image img {
     object-fit: cover;
     width: 120px;
     height: 120px;
     border-radius: 100px;
 }
 
-.category-item .category-description {
+.catalog__category-item .catalog__category-description {
     font-size: 14px;
     font-weight: 550;
     font-family: 'Circe Light', Arial, sans-serif;
@@ -495,7 +498,7 @@ h3 {
     padding: 30px;
 }
 
-.about-us-block-1 {
+.about-us__container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -511,7 +514,7 @@ h3 {
     /*background-color: #F0F0F0;*/
 }
 
-#map {
+#about-us-address__map {
     display: flex;
 
 }
@@ -522,7 +525,7 @@ h3 {
     flex-wrap: nowrap;
 }
 
-.address-map-selection-col1 {
+.about-us-address__left-column {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -537,7 +540,7 @@ h3 {
     font-family: 'Circe Regular', Arial, sans-serif;
 }
 
-.column-about-us-address {
+.about-us-address__info {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -551,12 +554,12 @@ h3 {
     /*height: 200px;*/
 }
 
-.about-us-selection-col1 {
+.about-us__left-column {
     flex-basis: 60%;
 
 }
 
-.faq-block {
+.faq {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -564,24 +567,24 @@ h3 {
     padding: 30px;
 }
 
-.faq {
+.faq__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
 }
 
-.faq .faq-item .faq-question {
+.faq__content .faq__item .faq__question {
     font-size: 14px;
     font-weight: 550;
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.faq .faq-item {
+.faq__content .faq__item {
     padding-right: 30px;
 }
 
 
-.faq-question {
+.faq__question {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -593,19 +596,19 @@ h3 {
     line-height: 30px;
 }
 
-.faq-question:hover,
-.faq-question:hover::after {
+.faq__question:hover,
+.faq__question:hover::after {
     cursor: pointer;
     background-color: #D5B8F1;
 }
 
-.faq-question.active {
+.faq__question.active {
     border-bottom: 1.5px solid;
     background-color: white;
 
 }
 
-.faq-question::after {
+.faq__question::after {
     content: '+';
     position: absolute;
     float: right;
@@ -616,12 +619,12 @@ h3 {
     text-align: left;
 }
 
-.faq-question.active::after {
+.faq__question.active::after {
     content: '-';
     background-color: white;
 }
 
-.faq-answer {
+.faq__answer {
     opacity: 0;
     padding: 0 20px;
     max-height: 0;
@@ -632,7 +635,7 @@ h3 {
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.faq-answer.active {
+.faq__answer.active {
     opacity: 1;
     padding: 20px;
     max-height: 100%;
@@ -642,7 +645,7 @@ h3 {
 
 
 /* Раздел о нас */
-.about-us-selection-col2 {
+.about-us__right-column {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -654,7 +657,7 @@ h3 {
     margin-left: 20px;
 }
 
-.about-us-selection-col2 img {
+.about-us__right-column img {
     border-radius: 18px;
     width: 100%;
     height: 100%;
@@ -666,17 +669,17 @@ h3 {
         flex-direction: column;
     }
 
-    .about-us-selection-col1 {
+    .about-us__left-column {
         flex-basis: auto;
     }
 
-    .about-us-selection-col2 {
+    .about-us__right-column {
         justify-content: center;
         margin-top: 20px;
     }
 }
 
-.container-about-us {
+.about-us__features {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
@@ -686,7 +689,7 @@ h3 {
 }
 
 
-.column-about-us {
+.about-us__feature {
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #000000;
@@ -694,7 +697,7 @@ h3 {
     /*height: 200px;*/
 }
 
-.description-about-us {
+.about-us__feature-description {
     margin-top: 20px;
 }
 
@@ -703,12 +706,9 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
     padding: 30px;
-    font-size: 14px;
-    font-weight: 550;
-    font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.reviews-selection-col1 {
+.reviews__column-1 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -717,29 +717,33 @@ h3 {
     border: 1.5px solid #000000;
 }
 
-.reviews-selection-col2 {
+.reviews__column-2 {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
 }
 
-.reviews-block-img {
+.reviews__rating-item {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 20px;
-    align-items: center;
     border-radius: 18px;
     border: 1.5px solid #000000;
-    padding: 20px;
-    width: 75%;
-    margin-bottom: 20px; /* Отступ справа для каждой иконки */
+    align-items: center;padding: 20px;
+    width: 75%;margin-bottom: 20px; /* Отступ справа для каждой иконки */
 }
 
-.reviews-block-img:last-child {
+.reviews__rating-item:last-child {
     margin-bottom: 0; /* Убираем отступ для последней иконки */
+}
+
+.reviews__rating-value {
+    font-size: 14px;
+    font-weight: 550;
+    font-family: 'Circe Light', Arial, sans-serif;
 }
 
 .developer-info {
@@ -749,7 +753,7 @@ h3 {
     border-radius: 18px;
 }
 
-.ascii-art {
+.developer-info__ascii-art {
     margin-right: 40px;
     font-family: monospace;
     color: #000000; /* Цвет под фиолетовую тему "Лаванда" */
@@ -757,50 +761,50 @@ h3 {
     font-size: 7px;
 }
 
-.container-dev {
+.developer-info__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 }
 
-.column-dev {
+.developer-info__column {
     background-color: #F7FEB5;
     padding: 0px;
 }
 
 @media (max-width: 1000px) {
-    .container-dev {
+    .developer-info__container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .column-dev:last-child {
+    .developer-info__column:last-child {
         grid-column: 1 / -1;
         order: 3;
     }
 
-    .column-dev:nth-child(2) {
+    .developer-info__column:nth-child(2) {
         order: 2;
     }
 }
 
 @media (max-width: 400px) {
-    .container-dev {
+    .developer-info__container {
         grid-template-columns: 1fr;
     }
 
-    .column-dev {
+    .developer-info__column {
         grid-column: 1 / -1;
     }
 }
 
-.column-dev img {
+.developer-info__column img {
     border-radius: 18px;
     width: 80%;
     height: auto;
     display: block;
 }
 
-.icon-dev {
+.developer-info__contact {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -814,20 +818,20 @@ h3 {
     width: 100px; /* Ширина блока 100px */
 }
 
-.icon-dev a {
+.developer-info__contact a {
     margin-right: 20px; /* Отступ справа для каждой иконки */
 }
 
-.icon-dev a:last-child {
+.developer-info__contact a:last-child {
     margin-right: 0; /* Убираем отступ для последней иконки */
 }
 
-.icon-dev img {
+.developer-info__contact img {
     width: 22px;
     height: 22px;
 }
 
-.dashed {
+.footer__nav-link {
     color: black;
     text-decoration: none; /* убираем подчеркивание */
     border-bottom: dashed;
@@ -836,7 +840,7 @@ h3 {
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.quote {
+.developer-info__quote {
     margin-top: 10px;
     padding-right: 20px;
     padding-left: 20px;
@@ -847,11 +851,11 @@ h3 {
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
-.quote p:first-child {
+.developer-info__quote p:first-child {
     font-size: 13px;
 }
 
-.quote p:last-child {
+.developer-info__quote p:last-child {
     font-size: 11px;
     text-align: right;
     font-weight: 400;
@@ -865,7 +869,7 @@ footer {
     background-color: #D5B8F1;
 }
 
-.footer-block {
+.footer__content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
@@ -947,7 +951,7 @@ table tr:nth-child(even) {
     }
 }
 
-.footer-left {
+.footer__left-column {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -956,22 +960,22 @@ table tr:nth-child(even) {
 
 
 @media (max-width: 600px) {
-    .footer-block {
+    .footer__content {
         grid-template-columns: 1fr;
     }
 }
 
-.logo-2 {
+.footer__logo {
     margin-bottom: 20px;
 }
 
-.logo-2 img {
+.footer__logo img {
     width: 150px;
     height: 100%;
     object-fit: contain;
 }
 
-.icon-footer {
+.footer__social-links {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -984,20 +988,20 @@ table tr:nth-child(even) {
     width: 70px;
 }
 
-.icon-footer a {
+.footer__social-links a {
     margin-right: 10px; /* Отступ справа для каждой иконки */
 }
 
-.icon-footer a:last-child {
+.footer__social-links a:last-child {
     margin-right: 0; /* Убираем отступ для последней иконки */
 }
 
-.icon-footer img {
+.footer__social-links img {
     width: 16px;
     height: 16px;
 }
 
-.footer-right {
+.footer__right-column {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -1006,8 +1010,11 @@ table tr:nth-child(even) {
     padding-top: 20px;
 }
 
-.footer-bottom {
+.footer__bottom {
     padding-top: 20px;
+}
+
+.footer__copyright{
     color: black;
     font-size: 13px;
     font-weight: 100;

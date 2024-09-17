@@ -17,30 +17,30 @@
 </head>
 <body>
 <header>
-    <section class="header-top">
-        <div class="block-info">
-            <div class="icon-text">
+    <section class="header__top">
+        <div class="header__info">
+            <div class="header__icon-text">
                 <img src="icons/clock.svg" alt="Часы" width="16" height="16">
-                <span class="text text-m">Время принятия заказов: с 8:00 до 20:00</span>
+                <span class="header__text header__text-icon">Время принятия заказов: с 8:00 до 20:00</span>
             </div>
-            <div class="icon-text">
+            <div class="header__icon-text">
                 <img src="icons/truck.svg" alt="Часы" width="16" height="16">
-                <span class="text text-m">Время доставки: с 10:00 до 22:00</span>
+                <span class="header__text header__text-icon">Время доставки: с 10:00 до 22:00</span>
             </div>
         </div>
-        <div class="contact-info">
-            <span class="text text-l">+7 (914) 000-00-00</span>
-            <span class="text text-l">Whatsapp</span>
-            <span class="text text-l">Telegram</span>
+        <div class="header__contacts">
+            <span class="header__text header__text-contacts">+7 (914) 000-00-00</span>
+            <span class="header__text header__text-contacts">Whatsapp</span>
+            <span class="header__text header__text-contacts">Telegram</span>
         </div>
     </section>
     <hr class="divider">
 
-    <section class="header-middle">
-        <div class="logo-block">
+    <section class="header__middle">
+        <div class="header__logo-block">
             <div class="site-nav-block">
                 <nav>
-                    <div class="logo-1">
+                    <div class="header__logo">
                         <img src="images/logotype.png" alt="Лаванда">
                     </div>
                     <div class="menu-logo">
@@ -96,26 +96,26 @@
             </div>
         </div>
 
-        <div class="search-and-actions">
-            <a href="#" class="search">
+        <div class="header__search-and-actions">
+            <a href="#" class="header__search-link">
                 <div class="icon-search">
                     <img src="icons/search.svg" alt="Поиск" width="22" height="22">
                 </div>
             </a>
 
-            <a href="#" class="search">
+            <a href="#" class="header__search-link">
                 <div class="icon-basket">
                     <img src="icons/heart.svg" alt="Избранное" width="22" height="22">
                 </div>
             </a>
 
-            <a href="#" class="search">
+            <a href="#" class="header__search-link">
                 <div class="icon-basket">
                     <img src="icons/shop.svg" alt="Корзина" width="22" height="22">
                 </div>
             </a>
 
-            <a href="#" class="search">
+            <a href="#" class="header__search-link">
                 <div class="icon-basket">
                     <img src="icons/people-circle.svg" alt="Личный кабинет" width="22" height="22">
                 </div>
@@ -126,22 +126,22 @@
 
 <main>
     <div class="block-selection-container">
-        <div class="block-selection-content">
-            <div class="block-selection-title-col">
+        <div class="weekly-selection__content">
+            <div class="weekly-selection__title-col">
                 <h1 class="title-1">ДОСТАВКА</h1>
             </div>
-            <div class="block-selection-description-col">
-                <p class="block-selection-description">
+            <div class="weekly-selection__description-col">
+                <p class="weekly-selection__description">
                     Несколько вариантов доставки (курьером, самовывоз).
                 </p>
             </div>
         </div>
     </div>
     <section class="about-us-address">
-        <div class="address-map-selection-col1">
+        <div class="about-us-address__left-column">
             <h2>САМОВЫВОЗ</h2>
 
-            <div class="column-about-us-address">
+            <div class="about-us-address__info">
                 <h3>
                     Партизанск, ул. Замараева, 5
                 </h3>
@@ -154,7 +154,7 @@
         </div>
 
         <div class="address-map-selection-col2">
-            <div id="map">
+            <div id="about-us-address__map">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A04372f220e817e42113272e1b01f2c7800bf6b0612480513330a82c87dc3592e&amp;width=650&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 
             </div>
@@ -233,31 +233,31 @@
 </main>
 
 <footer>
-    <div class="footer-block">
-        <div class="footer-left">
-            <div class="logo-2">
+    <div class="footer__content">
+        <div class="footer__left-column">
+            <div class="footer__logo">
                 <img src="images/logo.png" alt="Логотип Лаванда">
             </div>
 
-            <div class="icon-text">
+            <div class="header__icon-text">
                 <img src="icons/map.svg" alt="Часы" width="16" height="16">
-                <span class="text text-black"><a class="dashed" href="https://yandex.ru/maps/-/CDDCmGp2">ул. Замараева, 5, Партизанск</a></span>
+                <span class="header__text text-black"><a class="footer__nav-link" href="https://yandex.ru/maps/-/CDDCmGp2">ул. Замараева, 5, Партизанск</a></span>
             </div>
 
-            <div class="icon-footer">
+            <div class="footer__social-links">
                 <a href="https://chatwith.io/s/789681393338"><img src="icons/whatsapp.svg" alt="Ссылка на WhatsApp"></a>
                 <a href="https://t.me/gonosanna"><img src="icons/telegram.svg" alt="Ссылка на Telegram"></a>
                 <a href="https://vk.com/gonosanna"><img src="icons/vk.svg" alt="WhatsApp" ></a>
             </div>
         </div>
-        <div class="footer-right">
-            <span class="text text-black"><a class="dashed" href="#">ГЛАВНАЯ</a></span>
-            <span class="text text-black"><a class="dashed" href="#">КАТАЛОГ</a></span>
-            <span class="text text-black"><a class="dashed" href="#">О НАС</a></span>
-            <span class="text text-black"><a class="dashed" href="#">КОНТАКТЫ</a></span>
+        <div class="footer__right-column">
+            <span class="header__text text-black"><a class="footer__nav-link" href="#">ГЛАВНАЯ</a></span>
+            <span class="header__text text-black"><a class="footer__nav-link" href="#">КАТАЛОГ</a></span>
+            <span class="header__text text-black"><a class="footer__nav-link" href="#">О НАС</a></span>
+            <span class="header__text text-black"><a class="footer__nav-link" href="#">КОНТАКТЫ</a></span>
         </div>
     </div>
-    <div class="footer-bottom">
+    <div class="footer__bottom">
         <p>&copy; 2018 - 2023 Цветочный магазин "Лаванда". Все права защищены.</p>
     </div>
 </footer>
