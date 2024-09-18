@@ -19,6 +19,7 @@
     src: url('fonts/Circe/Circe-Bold.ttf') format('truetype');
 }
 
+
 .header__top {
     display: flex;
     flex-direction: row;
@@ -308,7 +309,7 @@ nav ul ul ul {
 
 /* 2 раздел */
 .weekly-selection {
-    padding: 30px;
+    padding: 30px 30px;
 }
 
 .weekly-selection__content {
