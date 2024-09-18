@@ -648,6 +648,12 @@ h3 {
     font-family: 'Circe Light', Arial, sans-serif;
 }
 
+a {
+    text-decoration: none; /* убираем подчеркивание */
+    color: inherit; /* возвращаем цвет текста к наследуемому */
+    outline: none; /* убираем синее выделение при фокусе */
+}
+
 .faq__answer.active {
     opacity: 1;
     padding: 20px;

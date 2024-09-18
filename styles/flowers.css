@@ -1,0 +1,350 @@
+/* подключаем шрифт */
+@font-face {
+    font-family: 'Circe Thin';
+    src: url('fonts/Circe/Circe-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Circe Light';
+    src: url('fonts/Circe/Circe-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Circe Regular';
+    src: url('fonts/Circe/Circe-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Circe Bold';
+    src: url('fonts/Circe/Circe-Bold.ttf') format('truetype');
+}
+
+
+h1 {
+    font-size: 40px;
+    font-weight: 550;
+    font-family: 'Circe Light', Arial, sans-serif;
+    color: #000000;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 550;
+    font-family: 'Circe Light', Arial, sans-serif;
+    color: #000000;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 550;
+    font-family: 'Circe Light', Arial, sans-serif;
+    color: #000000;
+}
+
+a {
+    text-decoration: none; /* убираем подчеркивание */
+    color: inherit; /* возвращаем цвет текста к наследуемому */
+    outline: none; /* убираем синее выделение при фокусе */
+}
+
+/* хеадер */
+
+
+.header__top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px;
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+}
+
+.header__middle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #D5B8F1;
+    margin-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 18px;
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.divider {
+
+}
+
+.header__info {
+    display: flex;
+    gap: 20px;
+}
+
+.header__icon-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__icon-text .header__text-icon {
+    margin-left: 10px;
+    color: #535353;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
+.header__icon-text .text-black {
+    margin-left: 10px;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
+.header__icon-text .text-title {
+    margin-left: 20px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
+.header__menu-list {
+    z-index: 1;
+    /*    Управлять порядком наложения блоков мы как раз и можем при помощи z-index https://doka.guide/css/z-index/*/
+}
+
+.header__contacts {
+}
+
+.header__contacts .header__text-contacts {
+    margin-left: 10px;
+    color: #535353;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
+.header__logo-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.header__logo {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*padding-bottom: 10px;*/
+    margin-top: 20px;
+    padding-right: 30px;
+    /*padding-right: 10px;*/
+}
+
+.header__logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.main-menu {
+    /*width: 80%;*/
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #D5B8F1;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Circe Light', Arial, sans-serif;
+    height: 70px;
+    /*border-radius: 10px;*/
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+/* убираем отступы и поля, а также list-style для "ul",
+ * и добавляем "position:relative" */
+nav ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+}
+
+/* применяем inline-block позиционирование к элементам навигации */
+nav ul li {
+    margin: 0px 7px 0 0;
+    font-weight: 550;
+    display:inline-block;
+    background-color: #D5B8F1;
+}
+
+/* стилизуем ссылки */
+nav a {
+    display:block;
+    padding:0 10px;
+    color: #000000;;
+    font-size:16px;
+    line-height: 50px;
+    text-decoration:none;
+}
+
+/* изменяем цвет фона при наведении курсора */
+nav a:hover {
+    background-color: #6C4795;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+/* отображаем выпадающий список при наведении */
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+/* первый уровень выпадающего списка */
+nav ul ul li {
+    min-width:170px;
+    float:none;
+    display:list-item;
+    position: relative;
+}
+
+nav ul ul ul {
+    position: absolute;
+    min-width:270px;
+    top:0;
+    left:100%;
+}
+
+.menu__link {
+    display: flex;
+    align-items: center;
+}
+
+.menu__link img {
+    margin-left: 5px;
+}
+
+.header__search-and-actions {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.header__search-link {
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+/* футер */
+
+.footer__nav-link {
+    color: black;
+    text-decoration: none; /* убираем подчеркивание */
+    border-bottom: dashed;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
+
+
+footer {
+    margin-top: 80px;
+    padding: 30px;
+    background-color: #D5B8F1;
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+
+.footer__left-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+
+@media (max-width: 600px) {
+    .footer__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.footer__logo img {
+    width: 150px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer__social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center; /* добавлено свойство для вертикального выравнивания */
+    border-radius: 18px;
+    border: 1.5px solid #000000;
+    margin-top: 20px;
+    padding: 5px 10px;
+    width: 70px;
+}
+
+.footer__social-links a {
+    margin-right: 10px; /* отступ справа для каждой иконки */
+}
+
+.footer__social-links a:last-child {
+    margin-right: 0; /* убираем отступ для последней иконки */
+}
+
+.footer__social-links img {
+    width: 16px;
+    height: 16px;
+}
+
+.footer__right-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.footer__bottom {
+    padding-top: 20px;
+}
+
+.footer__copyright{
+    color: black;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
