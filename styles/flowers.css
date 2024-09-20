@@ -19,26 +19,72 @@
     src: url('fonts/Circe/Circe-Bold.ttf') format('truetype');
 }
 
+/* Стили для десктопных устройств */
 
+/*@media (min-width: 768px) {*/
 h1 {
     font-size: 32px;
     font-weight: 550;
-    font-family: 'Circe Light', Arial, sans-serif;
+    font-family: 'Circe Regular', Arial, sans-serif;
     color: #000000;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 550;
-    font-family: 'Circe Light', Arial, sans-serif;
+    font-family: 'Circe Regular', Arial, sans-serif;
     color: #000000;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 550;
+    font-family: 'Circe Regular', Arial, sans-serif;
+    color: #000000;
+}
+
+.h4 {
+    font-size: 18px;
+    font-family: 'Circe Regular', Arial, sans-serif;
+}
+
+h5 {
+    font-size: 13px;
+    font-weight: 550;
+    font-family: 'Circe Regular', Arial, sans-serif;
+    color: #000000;
+}
+
+p {
+    font-size: 18px;
+}
+
+b {
+    font-size: 14px;
+    font-weight: 550;
+    font-family: 'Circe Regular', Arial, sans-serif;
+    color: #000000;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 767px) {
+
+}
+
+.flower__title {
+    margin-top: 0;
+}
+
+.image-right {
+    padding-right: 15px;
+}
+
+.flower__description_text {
+    font-size: 14px;
     font-weight: 550;
     font-family: 'Circe Light', Arial, sans-serif;
     color: #000000;
+
 }
 
 a {
@@ -47,21 +93,39 @@ a {
     outline: none; /* убираем синее выделение при фокусе */
 }
 
+.postcard-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.postcard-content__title {
+    padding: 15px 0 5px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* хочу убрать ненужные отступы от стандартного h5, можно было конечно поиграться и с line-height, но не хочу тратить время и подгонять */
+}
+
+.postcard-content__product-button-more {
+    padding: 5px 10px;
+    border-radius: 18px;
+    border: 1px solid #000000;
+    width: 70px;
+    height: 15px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Circe Bold', Arial, sans-serif;
+}
+
 .flower {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    position: relative;
-    margin: auto;
     padding: 70px 30px 0px 30px;
 }
 
-.flower-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.flower__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 30px;
 }
 
@@ -69,40 +133,30 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-    gap: 20px;
-    margin: auto;
 }
 
-.flower-content__item-right {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 20px;
-
-}
-
-.text-flower {
-    font-size: 14px;
-    font-weight: 550;
-    font-family: 'Circe Light', Arial, sans-serif;
-    color: #000000;
-}
-
-.flower-content__item img {
+.flower-content__item-left img {
     object-fit: cover;
     border-radius: 18px;
 }
 
-.flower-content__item-description {
+.flower__info {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
 }
 
-.flower-content__product-button-ago {
+.flower__nav-link {
+    color: black;
+    text-decoration: none; /* убираем подчеркивание */
+    border-bottom: dashed;
+    text-align: left;
+    font-size: 12px;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
+.flower__product-button-back {
     padding: 10px 15px;
     border-radius: 18px;
     border: 1px solid #000000;
@@ -113,10 +167,165 @@ a {
     font-family: 'Circe Regular', Arial, sans-serif;
 }
 
+.flower__add-to-cart {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    background-color: #6C4795;
+    border: 1px solid #6C4795;
+    color: white;
+    width: 80px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Circe Bold', Arial, sans-serif;
+}
+
+.flower__image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 40px 40px 0px;
+}
+
+.flower__image-gallery_big-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.flower__image-gallery_big-img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.3s;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.flower__image-gallery_small-container {
+    display: flex;
+    gap: 20px;
+}
+
+.flower__image-gallery_small-img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.flower__image-gallery_big-container.full-screen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    z-index: 9999;
+}
+
+.flower__image-gallery_big-img.full-screen {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+.faq__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.faq__content .flower__faq-item .flower__faq-question {
+    font-size: 14px;
+    font-weight: 150;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
+
+
+
+.flower__faq-question {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 1px solid;
+    line-height: 30px;
+}
+
+.flower__faq-question:hover,
+.flower__faq-question:hover::after {
+    cursor: pointer;
+    background-color: #D5B8F1;
+}
+
+.flower__faq-question.active {
+    border-bottom: 1.5px solid;
+    background-color: white;
+
+}
+
+.flower__faq-question::after {
+    content: '+';
+    position: absolute;
+    float: right;
+    right: 1rem;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: left;
+}
+
+.flower__faq-question.active::after {
+    content: '-';
+    background-color: white;
+}
+
+.flower__faq-answer {
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease 0.15s;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: 'Circe Light', Arial, sans-serif;
+}
+
+.flower__faq-answer.active {
+    opacity: 1;
+    padding: 20px;
+    max-height: 100%;
+    transition: all 0.35s ease 0.15s;
+    background-color: white;
+}
 
 /* хеадер */
-
-
 .header__top {
     display: flex;
     flex-direction: row;
@@ -134,8 +343,7 @@ a {
     justify-content: space-between;
     background-color: #D5B8F1;
     margin-top: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0 30px;
     border-radius: 18px;
     align-items: center; /* Выравнивание элементов по вертикали */
 }
@@ -149,11 +357,22 @@ a {
     gap: 20px;
 }
 
+.flower-content__icon-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 20px;
+}
+
 .header__icon-text {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
+
+
 
 .header__icon-text .header__text-icon {
     margin-left: 10px;
@@ -314,11 +533,6 @@ nav ul ul ul {
 }
 
 
-
-
-
-
-
 /* футер */
 
 .footer__nav-link {
@@ -382,13 +596,19 @@ footer {
     width: 70px;
 }
 
-.footer__social-links a {
+.footer__social-links a:not(:last-child) {
     margin-right: 10px; /* отступ справа для каждой иконки */
 }
 
-.footer__social-links a:last-child {
-    margin-right: 0; /* убираем отступ для последней иконки */
-}
+/*.footer__social-links a:last-child {*/
+/*    margin-right: 0; !* убираем отступ для последней иконки *!*/
+/*}*/
+
+/* Чтобы не создавать два селектора, можно написать короче, используя псевдокласс :not. Тут мы буквально говорим
+следующее: «Задай отступ всем ul, кроме последнего».
+ul:not(:last-child) {
+  margin-bottom: 30px;
+}*/
 
 .footer__social-links img {
     width: 16px;
