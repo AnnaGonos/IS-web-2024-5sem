@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        .flower__image-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .flower__image-gallery_big-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .flower__image-gallery_big-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .flower__image-gallery_small-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flower__image-gallery_small-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .flower__image-gallery_big-container.full-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .flower__image-gallery_big-img.full-screen {
+            width: auto;
+            height: auto;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="image-gallery">
+    <div class="big-image-container">
+        <img src="../../images/bouquet/bouquet-2.jpg" alt="Big Image" class="big-img">
+    </div>
+    <div class="small-images">
+        <img src="../../images/bouquet/bouquet-2.jpg" alt="Image 1" class="small-img">
+        <img src="../../images/bouquet/bouquet-8.bmp" alt="Image 2" class="small-img">
+        <img src="../../images/bouquet/bouquet-5.bmp" alt="Image 3" class="small-img">
+    </div>
+</div>
+<script>
+    // получаем необходимые элементы
+    const smallImgs = document.querySelectorAll('.flower__image-gallery_small-img');
+    const bigImg = document.querySelector('.flower__image-gallery_big-img');
+    const bigImageContainer = document.querySelector('.flower__image-gallery_big-container');
+
+    // счетчик кликов и флаг полноэкранного режима
+    let isFullScreen = false;
+
+    // обработчик клика на маленькие изображения
+    smallImgs.forEach(img => {
+        img.addEventListener('click', () => {
+            // меняем источник большого изображения
+            bigImg.src = img.src;
+            bigImg.classList.add('active');
+
+            // переключаем полноэкранный режим
+            toggleFullScreen();
+        });
+    });
+
+    // функция для переключения на полноэкранный режим
+    function toggleFullScreen() {
+        if (!isFullScreen) {
+            // переход в полноэкранный режим
+            bigImageContainer.classList.add('full-screen');
+            document.body.classList.add('overflow-hidden');
+        } else {
+            // выход из полноэкранного режима
+            bigImageContainer.classList.remove('full-screen');
+            document.body.classList.remove('overflow-hidden');
+        }
+        isFullScreen = !isFullScreen;
+    }
+
+    // обработчик клика вне большого изобр для выхода из полноэкранного режима
+    document.addEventListener('click', (event) => {
+        if (isFullScreen && !bigImageContainer.contains(event.target)) {
+            toggleFullScreen();
+        }
+    });
+</script>
+</body>
+</html>
