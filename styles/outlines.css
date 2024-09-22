@@ -453,6 +453,12 @@ nav ul ul ul {
     background-color: #6C4795;
 }
 
+@media (max-width: 900px) {
+    .slider {
+        margin-top: 150px;
+    }
+}
+
 @media (max-width: 600px) {
     .slider {
         /* Стили для основного блока слайдера */
