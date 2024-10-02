@@ -12,8 +12,10 @@
     <meta name="description" content="Магазин флористики Лаванда в Партизанске предлагает широкий ассортимент свежих
     цветов, уникальных букетов и флористических композиций. Мы предоставляем качественные услуги по доставке цветов и
     оформлению мероприятий. Выбирайте самые красивые и свежие цветы для любого повода!">
-    <link rel="stylesheet" href="styles/outlines.css">
+    <link rel="stylesheet" href="css/outlines.css">
     <link rel="icon" type="image/png" href="images/logotype.png">
+
+    <script src="js/load-time.js" defer></script>
 
     <!--metatextblock-->
     <title>Цветочный магазин "Лаванда" | Доставка букетов в Партизанске</title>
@@ -45,7 +47,7 @@
             <div class="header__site-nav-block">
                 <nav class="header__menu">
                     <div class="header__logo">
-                        <img src="images/logotype.png" alt="Лаванда" href="index.html">
+                        <img src="images/logotype.png" alt="Лаванда">
                     </div>
                     <div class="header__menu-list">
                         <ul class="header__list">
@@ -310,7 +312,7 @@
                     </div>
                 </div>
                 <div class="weekly-selection__product-button-block">
-                    <a href="pages/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
+                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
                     <a href="#" class="weekly-selection__product-button-basket">
@@ -351,6 +353,11 @@
     <section class="online-showcase">
         <div class="weekly-selection__container">
             <h2 class="weekly-selection__container-title">ОНЛАЙН-ВИТРИНА</h2>
+            <div class="weekly-selection__description">
+                <p>
+                    Можно забрать прямо сейчас из магазина
+                </p>
+            </div>
         </div>
 
         <div class="weekly-selection__products">
@@ -368,7 +375,7 @@
                     </div>
                 </div>
                 <div class="weekly-selection__product-button-block">
-                    <a href="pages/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
+                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
                     <a href="#" class="weekly-selection__product-button-basket">
@@ -393,7 +400,7 @@
                     </div>
                 </div>
                 <div class="weekly-selection__product-button-block">
-                    <a href="pages/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
+                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
                     <a href="#" class="weekly-selection__product-button-basket">
@@ -453,12 +460,11 @@
                 </div>
             </article>
         </div>
-
     </section>
 
 
     <!-- Каталог -->
-    <section class="catalog">
+    <section class="catalog" id="catalog">
         <div class="weekly-selection__container">
             <h2 class="weekly-selection__container-title">КАТАЛОГ</h2>
         </div>
@@ -513,52 +519,20 @@
                     <p>СВАДЕБНЫЕ<br>БУКЕТЫ</p>
                 </a>
             </div>
-            <div class="catalog__category-item">
-                <div class="catalog__category-image">
-                    <img src="https://avatars.mds.yandex.net/get-altay/927353/2a000001854921cb12b30c2996cc2ebc1276/XXXL"
-                         alt="Фото для категории сухоцветы">
-                </div>
-                <a href="#" class="catalog__category-description">
-                    <p>СУХОЦВЕТЫ</p>
-                </a>
-            </div>
-            <div class="catalog__category-item">
-                <div class="catalog__category-image">
-                    <img src="https://avatars.mds.yandex.net/get-altay/2447509/2a00000174635781945fce7ad1ae93da5943/XXXL"
-                         alt="Фото для категории добавить к букету">
-                </div>
-                <a href="#" class="catalog__category-description">
-                    <p>ДОБАВИТЬ<br>К БУКЕТУ</p>
-                </a>
-            </div>
-            <div class="catalog__category-item">
-                <div class="catalog__category-image">
-                    <img src="https://avatars.mds.yandex.net/get-altay/2776652/2a00000174635753d2ebf54a9ec83a120b77/XXXL"
-                         alt="Фото для категории в корзинах и кашпо">
-                </div>
-                <a href="#" class="catalog__category-description">
-                    <p>В КОРЗИНАХ<br>И КАШПО</p>
-                </a>
-            </div>
-            <div class="catalog__category-item">
-                <div class="catalog__category-image">
-                    <img src="images/bouquet/bouquet-6.bmp" alt="Фото для категории комнатные растения">
-                </div>
-                <a href="#" class="catalog__category-description">
-                    <p>КОМНАТНЫЕ<br>РАСТЕНИЯ</p>
-                </a>
-            </div>
-            <div class="catalog__category-item">
-                <div class="catalog__category-image">
-                    <img src="https://i.pinimg.com/736x/50/60/07/5060071b200c997fc58b5c7f5a72d753&#45;&#45;retail-store-design-retail-stores.jpg"
-                         alt="Фото для категории подарки и предметы для дома">
-                </div>
-                <a href="#" class="catalog__category-description">
-                    <p>ПОДАРКИ И<br>ПРЕДМЕТЫ ДЛЯ<br>ДОМА</p>
-                </a>
-            </div>
+        </div>
+        <div class="catalog__section-more">
+            <a href="pages/catalog-page-bouquet/catalog-page.html" class="weekly-selection__product-button-more catalog-button">
+                <h5 class="font-bold">ПОДРОБНЕЕ</h5>
+            </a>
         </div>
     </section>
+
+    <section class="load-time-section">
+        <div class="load-time-section_content">
+            <h4 id="loadStats"></h4>
+        </div>
+    </section>
+
 
     <!--    О нас-->
     <section class="about-us">
