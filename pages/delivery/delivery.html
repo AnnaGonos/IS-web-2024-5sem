@@ -13,30 +13,33 @@
     <meta name="description" content="Доставка букетов в магазине Лаванда. Прайс-лист">
     <link rel="stylesheet" href="../../css/outlines.css">
     <link rel="icon" type="image/png" href="../../images/logotype.png">
+
+    <script src="../../js/loadTime.js" defer></script>
+    <script src="../../js/domActive.js" defer></script>
 </head>
 <body>
 <header>
-    <section class="header__top">
+    <section class="header__info-section">
         <div class="header__info">
-            <div class="header__icon-text">
-                <img src="../../icons/clock.svg" alt="Часы" width="16" height="16">
-                <p class="header__text header__text-icon">Время принятия заказов: с 8:00 до 18:00</p>
+            <div class="header__order-time">
+                <img src="../../icons/clock.svg" alt="Часы" width="16" height="16" class="header__icon">
+                <p class="header__text header__text--order-time">Время принятия заказов: с 8:00 до 18:00</p>
             </div>
-            <div class="header__icon-text">
-                <img src="../../icons/truck.svg" alt="Грузовик" width="16" height="16">
-                <p class="header__text header__text-icon">Время доставки: с 8:30 до 19:00</p>
+            <div class="header__delivery-time">
+                <img src="../../icons/truck.svg" alt="Грузовик" width="16" height="16" class="header__icon">
+                <p class="header__text header__text--delivery-time">Время доставки: с 8:30 до 19:00</p>
             </div>
         </div>
         <div class="header__contacts">
-            <p class="header__text header__text-contacts">+7 (914) 000-00-00</p>
-            <p class="header__text header__text-contacts">Whatsapp</p>
-            <p class="header__text header__text-contacts">Telegram</p>
+            <p class="header__text header__text--contact">+7 (914) 000-00-00</p>
+            <p class="header__text header__text--contact">Whatsapp</p>
+            <p class="header__text header__text--contact">Telegram</p>
         </div>
     </section>
     <hr class="divider">
 
 
-    <section class="header__middle">
+    <section class="header__navigation-section">
         <div class="header__logo-block">
             <div class="header__site-nav-block">
                 <nav class="header__menu">
@@ -46,17 +49,17 @@
                     <div class="header__menu-list">
                         <ul class="header__list">
                             <li class="header__list-item">
-                                <a class="header__link" href="#">
+                                <a class="header__link" href="../catalog-page-bouquet/catalog-page.html">
                                     <h5>КАТАЛОГ</h5>
                                 </a>
                             </li>
                             <li class="header__list-item">
-                                <a class="header__link" href="#">
+                                <a class="header__link" href="">
                                     <h5>БЛОГ</h5>
                                 </a>
                             </li>
                             <li class="header__list-item">
-                                <a class="header__link" href="../../index.html#faq">
+                                <a class="header__link" href="../review/reviews.html">
                                     <h5>ОТЗЫВЫ</h5>
                                 </a>
                             </li>
@@ -77,19 +80,19 @@
                             <h5 class="header__menu-text">МЕНЮ</h5>
                         </div>
                         <div class="header__menu-dropdown">
-                            <a href="#" class="header__link">
+                            <a href="" class="header__link">
                                 <h5>КАТАЛОГ</h5>
                             </a>
-                            <a href="#" class="header__link">
+                            <a href="" class="header__link">
                                 <h5>БЛОГ</h5>
                             </a>
-                            <a href="#" class="header__link">
+                            <a href="" class="header__link">
                                 <h5>ОТЗЫВЫ</h5>
                             </a>
-                            <a href="#faq" class="header__link">
+                            <a href="../../index.html#faq" class="header__link">
                                 <h5>FAQ</h5>
                             </a>
-                            <a href="#" class="header__link">
+                            <a class="header__link" href="#">
                                 <h5>ДОСТАВКА</h5>
                             </a>
                         </div>
@@ -100,22 +103,22 @@
 
         <div class="header__search-and-actions">
             <div class="header__search-links">
-                <a href="#" class="header__search-link">
+                <a href="" class="header__search-link">
                     <div class="header__search-icon">
                         <img src="../../icons/search.svg" alt="Поиск" width="22" height="22">
                     </div>
                 </a>
-                <a href="#" class="header__search-link">
+                <a href="" class="header__search-link">
                     <div class="header__search-icon">
                         <img src="../../icons/heart.svg" alt="Избранное" width="22" height="22">
                     </div>
                 </a>
-                <a href="#" class="header__search-link">
+                <a href="" class="header__search-link">
                     <div class="header__search-icon">
                         <img src="../../icons/shop.svg" alt="Корзина" width="22" height="22">
                     </div>
                 </a>
-                <a href="#" class="header__search-link">
+                <a href="" class="header__search-link">
                     <div class="header__search-icon">
                         <img src="../../icons/people-circle.svg" alt="Личный кабинет" width="22" height="22">
                     </div>
@@ -126,22 +129,22 @@
                     <img src="../../icons/more.svg" alt="Больше" width="22" height="22" class="header__more-icon">
                 </div>
                 <div class="header__search-dropdown">
-                    <a href="#" class="header__search-link">
+                    <a href="" class="header__search-link">
                         <div class="header__search-icon">
                             <img src="../../icons/search.svg" alt="Поиск" width="22" height="22">
                         </div>
                     </a>
-                    <a href="#" class="header__search-link">
+                    <a href="" class="header__search-link">
                         <div class="header__search-icon">
                             <img src="../../icons/heart.svg" alt="Избранное" width="22" height="22">
                         </div>
                     </a>
-                    <a href="#" class="header__search-link">
+                    <a href="" class="header__search-link">
                         <div class="header__search-icon">
                             <img src="../../icons/shop.svg" alt="Корзина" width="22" height="22">
                         </div>
                     </a>
-                    <a href="#" class="header__search-link">
+                    <a href="" class="header__search-link">
                         <div class="header__search-icon">
                             <img src="../../icons/people-circle.svg" alt="Личный кабинет" width="22" height="22">
                         </div>
@@ -151,49 +154,8 @@
         </div>
     </section>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            var headerMiddle = document.querySelector('.header__middle');
-            var headerMiddlePosition = headerMiddle.getBoundingClientRect().top;
-            var windowHeight = window.innerHeight;
-
-            if (headerMiddlePosition < windowHeight) {
-                headerMiddle.classList.add('sticky');
-            } else {
-                headerMiddle.classList.remove('sticky');
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var moreIcon = document.querySelector('.header__more-icon');
-            var searchDropdown = document.querySelector('.header__search-dropdown');
-
-            moreIcon.addEventListener('click', function() {
-                searchDropdown.classList.toggle('show');
-            });
-
-            window.addEventListener('click', function(event) {
-                if (!event.target.matches('.header__more-icon') && !event.target.closest('.header__search-dropdown')) {
-                    searchDropdown.classList.remove('show');
-                }
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuToggle = document.querySelector('.header__menu-toggle');
-            var menuDropdown = document.querySelector('.header__menu-dropdown');
-
-            menuToggle.addEventListener('click', function() {
-                menuDropdown.classList.toggle('show');
-            });
-
-            window.addEventListener('click', function(event) {
-                if (!event.target.closest('.header__menu-toggle')) {
-                    menuDropdown.classList.remove('show');
-                }
-            });
-        });
-    </script>
+    <script src="../../js/header.js" defer></script>
+    <script src="../../js/domActive.js"></script>
 </header>
 
 <main>
@@ -208,7 +170,6 @@
             </div>
         </div>
     </section>
-
     <section class="about-us-address">
         <div class="delivery-selection__container">
             <h2 class="delivery-selection__container-title">КАК НАС НАЙТИ?</h2>
@@ -239,6 +200,11 @@
     <section class="delivery-price">
         <div class="delivery-selection__container">
             <h2 class="delivery-selection__container-title">ПРАЙС-ЛИСТ ДОСТАВКИ</h2>
+            <div class="delivery-selection__description">
+                <p>
+                    Если вы выбрали доставку курьером, то можно рассчитать стоимость из данной таблицы
+                </p>
+            </div>
         </div>
 
         <div class="table-delivery">
@@ -526,6 +492,12 @@
             </table>
         </div>
     </section>
+
+    <section class="load-time-section">
+        <div class="load-time-section_content">
+            <p id="loadTime"></p>
+        </div>
+    </section>
 </main>
 
 
@@ -536,7 +508,7 @@
                 <img src="../../images/logo.png" alt="Логотип Лаванда">
             </div>
 
-            <div class="header__icon-text">
+            <div class="header__order-time">
                 <img src="../../icons/map.svg" alt="Часы" width="16" height="16">
                 <span class="header__text text-black"><a class="footer__nav-link" href="https://yandex.ru/maps/-/CDDCmGp2">ул. Замараева, 5, Партизанск</a></span>
             </div>
@@ -549,9 +521,9 @@
         </div>
         <div class="footer__content-item">
             <p><a class="footer__nav-link" href="../../index.html">ГЛАВНАЯ</a></p>
-            <p><a class="footer__nav-link" href="#">КАТАЛОГ</a></p>
-            <p><a class="footer__nav-link" href="#">О НАС</a></p>
-            <p><a class="footer__nav-link" href="#">КОНТАКТЫ</a></p>
+            <p><a class="footer__nav-link" href="">КАТАЛОГ</a></p>
+            <p><a class="footer__nav-link" href="">О НАС</a></p>
+            <p><a class="footer__nav-link" href="">КОНТАКТЫ</a></p>
         </div>
     </div>
     <div class="footer__bottom">

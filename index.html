@@ -15,34 +15,35 @@
     <link rel="stylesheet" href="css/outlines.css">
     <link rel="icon" type="image/png" href="images/logotype.png">
 
-    <script src="js/load-time.js" defer></script>
+    <script src="js/loadTime.js" defer></script>
+    <script src="js/domActive.js" defer></script>
 
     <!--metatextblock-->
     <title>Цветочный магазин "Лаванда" | Доставка букетов в Партизанске</title>
 </head>
 <body>
 <header>
-    <section class="header__top">
+    <div class="header__info-section">
         <div class="header__info">
-            <div class="header__icon-text">
-                <img src="icons/clock.svg" alt="Часы" width="16" height="16">
-                <p class="header__text header__text-icon">Время принятия заказов: с 8:00 до 20:00</p>
+            <div class="header__order-time">
+                <img src="icons/clock.svg" alt="Часы" width="16" height="16" class="header__icon">
+                <p class="header__text header__text--order-time">Время принятия заказов: с 8:00 до 18:00</p>
             </div>
-            <div class="header__icon-text">
-                <img src="icons/truck.svg" alt="Грузовик" width="16" height="16">
-                <p class="header__text header__text-icon">Время доставки: с 8:30 до 19:00</p>
+            <div class="header__delivery-time">
+                <img src="icons/truck.svg" alt="Грузовик" width="16" height="16" class="header__icon">
+                <p class="header__text header__text--delivery-time">Время доставки: с 8:30 до 19:00</p>
             </div>
         </div>
         <div class="header__contacts">
-            <p class="header__text header__text-contacts">+7 (914) 000-00-00</p>
-            <p class="header__text header__text-contacts">Whatsapp</p>
-            <p class="header__text header__text-contacts">Telegram</p>
+            <p class="header__text header__text--contact">+7 (914) 000-00-00</p>
+            <p class="header__text header__text--contact">Whatsapp</p>
+            <p class="header__text header__text--contact">Telegram</p>
         </div>
-    </section>
+    </div>
     <hr class="divider">
 
 
-    <section class="header__middle">
+    <div class="header__navigation-section">
         <div class="header__logo-block">
             <div class="header__site-nav-block">
                 <nav class="header__menu">
@@ -52,17 +53,17 @@
                     <div class="header__menu-list">
                         <ul class="header__list">
                             <li class="header__list-item">
-                                <a class="header__link" href="#">
+                                <a class="header__link" href="pages/catalog-page-bouquet/catalog-page.html">
                                     <h5>КАТАЛОГ</h5>
                                 </a>
                             </li>
                             <li class="header__list-item">
-                                <a class="header__link" href="#">
+                                <a class="header__link" href="">
                                     <h5>БЛОГ</h5>
                                 </a>
                             </li>
                             <li class="header__list-item">
-                                <a class="header__link" href="#reviews">
+                                <a class="header__link" href="pages/review/reviews.html">
                                     <h5>ОТЗЫВЫ</h5>
                                 </a>
                             </li>
@@ -72,7 +73,7 @@
                                 </a>
                             </li>
                             <li class="header__list-item">
-                                <a class="header__link" href="pages/delivery/delivery.html">
+                                <a  href="pages/delivery/delivery.html" class="header__link">
                                     <h5>ДОСТАВКА</h5>
                                 </a>
                             </li>
@@ -89,7 +90,7 @@
                             <a href="#" class="header__link">
                                 <h5>БЛОГ</h5>
                             </a>
-                            <a href="#" class="header__link">
+                            <a href="pages/review/reviews.html" class="header__link">
                                 <h5>ОТЗЫВЫ</h5>
                             </a>
                             <a href="#faq" class="header__link">
@@ -155,52 +156,10 @@
                 </div>
             </div>
         </div>
-    </section>
-    
+    </div>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            var headerMiddle = document.querySelector('.header__middle');
-            var headerMiddlePosition = headerMiddle.getBoundingClientRect().top;
-            var windowHeight = window.innerHeight;
-
-            if (headerMiddlePosition < windowHeight) {
-                headerMiddle.classList.add('sticky');
-            } else {
-                headerMiddle.classList.remove('sticky');
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var moreIcon = document.querySelector('.header__more-icon');
-            var searchDropdown = document.querySelector('.header__search-dropdown');
-
-            moreIcon.addEventListener('click', function() {
-                searchDropdown.classList.toggle('show');
-            });
-
-            window.addEventListener('click', function(event) {
-                if (!event.target.matches('.header__more-icon') && !event.target.closest('.header__search-dropdown')) {
-                    searchDropdown.classList.remove('show');
-                }
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuToggle = document.querySelector('.header__menu-toggle');
-            var menuDropdown = document.querySelector('.header__menu-dropdown');
-
-            menuToggle.addEventListener('click', function() {
-                menuDropdown.classList.toggle('show');
-            });
-
-            window.addEventListener('click', function(event) {
-                if (!event.target.closest('.header__menu-toggle')) {
-                    menuDropdown.classList.remove('show');
-                }
-            });
-        });
-    </script>
+    <script src="js/header.js" defer></script>
+    <script src="js/domActive.js"></script>
 </header>
 
 <main>
@@ -242,80 +201,44 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Инициализация переменной, отвечающей за текущий индекс слайда
-            var slideIndex = 0;
-            // Вызов функции, отображающей слайды
-            showSlides();
+    <script src="js/clickerSlide.js" defer></script>
 
-            // Функция, отображающая слайды
-            function showSlides() {
-                var i;
-                // Получение всех элементов со слайдами
-                var slides = document.getElementsByClassName("slider__slide");
-                // Получение всех элементов с точками-индикаторами
-                var dots = document.getElementsByClassName("slider__dot");
-
-                // Скрытие всех слайдов
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-
-                // Увеличение индекса текущего слайда
-                slideIndex++;
-                // Если индекс превышает количество слайдов, сбрасываем его на 1
-                if (slideIndex > slides.length) {slideIndex = 1}
-
-                // Удаление класса "active" со всех точек-индикаторов
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" slider__dot--active", "");
-                }
-
-                // Отображение текущего слайда
-                slides[slideIndex-1].style.display = "block";
-                // Добавление класса "active" к текущей точке-индикатору
-                dots[slideIndex-1].className += " slider__dot--active";
-
-                // вызываем функцию showSlides через 5 секунд (автоматическая смена слайдов)
-                setTimeout(showSlides, 4000);
-            }
-        });
-    </script>
-
-
-
+    <section class="load-time-section">
+        <div class="load-time-section_content">
+            <p id="loadTime"></p>
+        </div>
+    </section>
 
     <!-- Выбор недели -->
     <section class="weekly-selection">
-        <div class="weekly-selection__container">
-            <h2 class="weekly-selection__container-title">ВЫБОР НЕДЕЛИ</h2>
+        <div class="flowers-selection__container">
+            <h2 class="flowers-selection__container-title">ВЫБОР НЕДЕЛИ</h2>
 
-            <div class="weekly-selection__description">
+            <div class="flowers-selection__description">
                 <p>
                     Специальные предложения и лимитированные коллекции,&nbsp; доступные только в течение недели
                 </p>
             </div>
         </div>
 
-        <div class="weekly-selection__products">
-            <article class="weekly-selection__product-card">
-                <div class="weekly-selection__product-image">
+        <div class="flowers-selection__products">
+            <article class="flowers__product-card">
+                <div class="flowers-selection__product-image">
                     <img src="images/bouquet/bouquet-7.bmp" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="weekly-selection__product-description">
+                <div class="flowers-selection__product-description">
                     <h5 class="font-regular">
                         БУКЕТ №7
                     </h5>
-                    <div class="weekly-selection__product-price">
+                    <div class="flowers-selection__product-price">
                         <p>4 200 ₽</p>
                     </div>
                 </div>
-                <div class="weekly-selection__product-button-block">
-                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
+                <div class="flowers-selection__product-button-block">
+                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="flowers-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
-                    <a href="#" class="weekly-selection__product-button-basket">
+                    <a href="#" class="flowers-selection__product-button-basket">
                         <h5 class="font-bold color-white">
                             В КОРЗИНУ
                         </h5>
@@ -323,23 +246,23 @@
                 </div>
             </article>
 
-            <article class="weekly-selection__product-card">
-                <div class="weekly-selection__product-image">
+            <article class="flowers__product-card">
+                <div class="flowers-selection__product-image">
                     <img src="images/bouquet/bouquet-8.bmp" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="weekly-selection__product-description">
+                <div class="flowers-selection__product-description">
                     <h5 class="font-regular">
                         БУКЕТ №8
                     </h5>
-                    <div class="weekly-selection__product-price">
+                    <div class="flowers-selection__product-price">
                         <p>1 000 ₽</p>
                     </div>
                 </div>
-                <div class="weekly-selection__product-button-block">
-                    <a href="#" class="weekly-selection__product-button-more">
+                <div class="flowers-selection__product-button-block">
+                    <a href="#" class="flowers-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
-                    <a href="#" class="weekly-selection__product-button-basket">
+                    <a href="#" class="flowers-selection__product-button-basket">
                         <h5 class="font-bold color-white">
                             В КОРЗИНУ
                         </h5>
@@ -351,34 +274,32 @@
 
     <!-- Онлайн-витрина -->
     <section class="online-showcase">
-        <div class="weekly-selection__container">
-            <h2 class="weekly-selection__container-title">ОНЛАЙН-ВИТРИНА</h2>
-            <div class="weekly-selection__description">
-                <p>
-                    Можно забрать прямо сейчас из магазина
-                </p>
+        <div class="flowers-selection__container">
+            <h2 class="flowers-selection__container-title">ОНЛАЙН-ВИТРИНА</h2>
+            <div class="flowers-selection__description">
+                <p>Можно забрать прямо сейчас из магазина</p>
             </div>
         </div>
 
-        <div class="weekly-selection__products">
-            <article class="weekly-selection__product-card">
-                <div class="weekly-selection__product-image">
+        <div class="flowers-selection__products">
+            <article class="flowers__product-card">
+                <div class="flowers-selection__product-image">
                     <img src="images/bouquet/bouquet-5.bmp" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="weekly-selection__product-description">
+                <div class="flowers-selection__product-description">
                     <h5 class="font-regular">
                         БУКЕТ №5
                     </h5>
-                    <div class="weekly-selection__product-price">
+                    <div class="flowers-selection__product-price">
                         <p>1 700 ₽</p>
                         <p><del>2 000 ₽</del></p>
                     </div>
                 </div>
-                <div class="weekly-selection__product-button-block">
-                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
+                <div class="flowers-selection__product-button-block">
+                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="flowers-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
-                    <a href="#" class="weekly-selection__product-button-basket">
+                    <a href="#" class="flowers-selection__product-button-basket">
                         <h5 class="font-bold color-white">
                             В КОРЗИНУ
                         </h5>
@@ -386,24 +307,24 @@
                 </div>
             </article>
 
-            <article class="weekly-selection__product-card">
-                <div class="weekly-selection__product-image">
+            <article class="flowers__product-card">
+                <div class="flowers-selection__product-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/2389272/2a0000017463575c49498522d10e9e4e4790/XXXL" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="weekly-selection__product-description">
+                <div class="flowers-selection__product-description">
                     <h5 class="font-regular">
                         БУКЕТ №150
                     </h5>
-                    <div class="weekly-selection__product-price">
+                    <div class="flowers-selection__product-price">
                         <p>3 000 ₽</p>
                         <p><del>3 600 ₽</del></p>
                     </div>
                 </div>
-                <div class="weekly-selection__product-button-block">
-                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="weekly-selection__product-button-more">
+                <div class="flowers-selection__product-button-block">
+                    <a href="pages/catalog-page-bouquet/bouquet/bouquet-1.html" class="flowers-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
-                    <a href="#" class="weekly-selection__product-button-basket">
+                    <a href="#" class="flowers-selection__product-button-basket">
                         <h5 class="font-bold color-white">
                             В КОРЗИНУ
                         </h5>
@@ -411,48 +332,48 @@
                 </div>
             </article>
 
-            <article class="weekly-selection__product-card">
-                <div class="weekly-selection__product-image">
+            <article class="flowers__product-card">
+                <div class="flowers-selection__product-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/2804357/2a0000017463576b11b1b81dc1947cd245ea/XXXL" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="weekly-selection__product-description">
+                <div class="flowers-selection__product-description">
                     <h5 class="font-regular">
                         БУКЕТ №151
                     </h5>
-                    <div class="weekly-selection__product-price">
+                    <div class="flowers-selection__product-price">
                         <p>1 900 ₽</p>
                         <p><del>2 300 ₽</del></p>
                     </div>
                 </div>
-                <div class="weekly-selection__product-button-block">
-                    <a href="#" class="weekly-selection__product-button-more">
+                <div class="flowers-selection__product-button-block">
+                    <a href="#" class="flowers-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
-                    <a href="#" class="weekly-selection__product-button-basket">
+                    <a href="#" class="flowers-selection__product-button-basket">
                         <h5 class="font-bold color-white">
                             В КОРЗИНУ
                         </h5>
                     </a>
                 </div>
             </article>
-            <article class="weekly-selection__product-card">
-                <div class="weekly-selection__product-image">
+            <article class="flowers__product-card">
+                <div class="flowers-selection__product-image">
                     <img src="https://avatars.mds.yandex.net/get-altay/10328405/2a0000018ed4cf6d4a6d513568f938869d72/XXXL" alt="Девушка с композицией в коробке">
                 </div>
-                <div class="weekly-selection__product-description">
+                <div class="flowers-selection__product-description">
                     <h5 class="font-regular">
                         БУКЕТ №152
                     </h5>
-                    <div class="weekly-selection__product-price">
+                    <div class="flowers-selection__product-price">
                         <p>2 000 ₽</p>
                         <p><del>2 400 ₽</del></p>
                     </div>
                 </div>
-                <div class="weekly-selection__product-button-block">
-                    <a href="#" class="weekly-selection__product-button-more">
+                <div class="flowers-selection__product-button-block">
+                    <a href="#" class="flowers-selection__product-button-more">
                         <h5 class="font-bold">ПОДРОБНЕЕ</h5>
                     </a>
-                    <a href="#" class="weekly-selection__product-button-basket">
+                    <a href="#" class="flowers-selection__product-button-basket">
                         <h5 class="font-bold color-white">
                             В КОРЗИНУ
                         </h5>
@@ -465,8 +386,8 @@
 
     <!-- Каталог -->
     <section class="catalog" id="catalog">
-        <div class="weekly-selection__container">
-            <h2 class="weekly-selection__container-title">КАТАЛОГ</h2>
+        <div class="flowers-selection__container">
+            <h2 class="flowers-selection__container-title">КАТАЛОГ</h2>
         </div>
         <div class="catalog__categories">
             <div class="catalog__category-item">
@@ -521,25 +442,18 @@
             </div>
         </div>
         <div class="catalog__section-more">
-            <a href="pages/catalog-page-bouquet/catalog-page.html" class="weekly-selection__product-button-more catalog-button">
+            <a href="pages/catalog-page-bouquet/catalog-page.html" class="flowers-selection__product-button-more catalog-button">
                 <h5 class="font-bold">ПОДРОБНЕЕ</h5>
             </a>
         </div>
     </section>
 
-    <section class="load-time-section">
-        <div class="load-time-section_content">
-            <h4 id="loadStats"></h4>
-        </div>
-    </section>
-
-
     <!--    О нас-->
     <section class="about-us">
         <div class="about-us__container">
             <div class="about-us__container-item">
-                <div class="weekly-selection__container">
-                    <h2 class="weekly-selection__container-title">О НАС</h2>
+                <div class="flowers-selection__container">
+                    <h2 class="flowers-selection__container-title">О НАС</h2>
                 </div>
                 <div class="about-us__features">
                     <div class="about-us__feature-item">
@@ -597,8 +511,8 @@
     </section>
 
     <section class="about-us-address">
-        <div class="weekly-selection__container">
-            <h3 class="weekly-selection__container-title">КАК НАС НАЙТИ?</h3>
+        <div class="flowers-selection__container">
+            <h3 class="flowers-selection__container-title">КАК НАС НАЙТИ?</h3>
         </div>
         <div class="about-us-address__container">
             <div class="about-us-address__container-item">
@@ -624,8 +538,8 @@
     <!-- Ответы на вопросы -->
     <section id="faq" class="faq">
         <div class="faq__container">
-            <div class="weekly-selection__container">
-                <h2 class="weekly-selection__container-title">FAQ</h2>
+            <div class="flowers-selection__container">
+                <h2 class="flowers-selection__container-title">FAQ</h2>
             </div>
             <div class="faq__content">
                 <div class="flower__faq-item">
@@ -663,25 +577,30 @@
                     </div>
                 </div>
             </div>
+            <div class="catalog__section-more">
+                <a href="pages/catalog-page-bouquet/catalog-page.html" class="flowers-selection__product-button-more catalog-button">
+                    <h5 class="font-bold">ПОДРОБНЕЕ</h5>
+                </a>
+            </div>
         </div>
         <script>
-        const items = document.querySelectorAll(".flower__faq-question");
-        function toggleAccordion(){
-            this.classList.toggle('active');
-            this.nextElementSibling.classList.toggle('active');
-        }
+            const items = document.querySelectorAll(".flower__faq-question");
+            function toggleAccordion(){
+                this.classList.toggle('active');
+                this.nextElementSibling.classList.toggle('active');
+            }
 
-        items.forEach(item => item.addEventListener('click', toggleAccordion));
+            items.forEach(item => item.addEventListener('click', toggleAccordion));
         </script>
         <!-- находим все элементы с классом faq-question и сохраняем их в переменной items.затем  определяем функцию
         toggleAccordion(), которая при клике на вопрос (элемент с классом faq-question) добавляет или удаляет класс
         active у этого элемента и у следующего за ним элемента (ответ, элемент с классом faq-answer).
-   - В конце скрипта добавляем обработчик клика на каждый элемент faq-question, вызывая функцию toggleAccordion(). -->
+        - В конце скрипта добавляем обработчик клика на каждый элемент faq-question, вызывая функцию toggleAccordion(). -->
     </section>
 
     <section id="reviews" class="reviews">
-        <div class="reviews__container-item_container">
-            <h2 class="reviews__container-item_container-title">ОТЗЫВЫ КЛИЕНТОВ</h2>
+        <div class="reviews__container">
+            <h2 class="reviews__container-title">ОТЗЫВЫ КЛИЕНТОВ</h2>
         </div>
         <div class="reviews__container">
             <div class="reviews__container-item">
@@ -707,6 +626,11 @@
                         <p>4.6 из 5</p>
                     </div>
                 </div>
+                <div class="catalog__section-more">
+                    <a href="pages/review/reviews.html" class="flowers-selection__product-button-more catalog-button">
+                        <h5 class="font-bold">ПОДРОБНЕЕ</h5>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -714,8 +638,8 @@
 
     <section class="developer-info">
         <div class="weekly-selection__content">
-            <div class="weekly-selection__container">
-                <h2 class="weekly-selection__container-title">РАЗРАБОТЧИК ДАННОГО САЙТА</h2>
+            <div class="flowers-selection__container">
+                <h2 class="flowers-selection__container-title">РАЗРАБОТЧИК ДАННОГО САЙТА</h2>
                 <blockquote class="developer-info__quote">
                     <p>
                         Наша <strong>формула успеха</strong>:
@@ -797,7 +721,7 @@
                 <img src="images/logo.png" alt="Логотип Лаванда">
             </div>
 
-            <div class="header__icon-text">
+            <div class="header__order-time">
                 <img src="icons/map.svg" alt="Часы" width="16" height="16">
                 <span class="header__text text-black"><a class="footer__nav-link" href="https://yandex.ru/maps/-/CDDCmGp2">ул. Замараева, 5, Партизанск</a></span>
             </div>
