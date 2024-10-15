@@ -148,8 +148,6 @@ main {
 }
 
 
-
-
 .header__info-section {
     padding: 0 80px 0 80px;
     display: grid;
@@ -204,7 +202,6 @@ main {
     }
 
 }
-
 
 .header__info {
     display: flex;
@@ -270,15 +267,11 @@ main {
     gap: 20px;
 }
 
-
-
 .header__search-icon {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
-
-
 
 .header__search-icon-wrapper {
     position: relative;
@@ -313,7 +306,6 @@ main {
     background-color: #6C4795;
 }
 
-
 @media screen and (max-width: 1000px) {
     .header__search-link {
         display: none;
@@ -327,10 +319,6 @@ main {
     .header__search-icon-wrapper:hover .header__search-dropdown {
         display: block;
     }
-}
-
-.main-menu {
-    /*width: 80%;*/
 }
 
 .header__menu {
@@ -357,15 +345,15 @@ main {
 }
 
 .header__link.active h5 {
-    color: #6C4795; /* Цвет текста для активного пункта */
-    font-weight: bold; /* Жирное начертание для активации */
+    color: #6C4795;
+    font-weight: bold;
     text-decoration: none; /* Убираем нижнее подчеркивание */
 }
 
 .header__link h5:hover{
-    color: #D5B8F1; /* Цвет текста для активного пункта */
-    font-weight: bold; /* Жирное начертание для активации */
-    text-decoration: none; /* Убираем нижнее подчеркивание */
+    color: #D5B8F1;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .header__menu-list .header__list-item .header__link.active {
@@ -396,7 +384,6 @@ main {
     display: block;
 }
 
-
 nav {
     display: flex;
     flex-direction: row;
@@ -407,12 +394,9 @@ nav {
     font-weight: 400;
     font-family: 'Circe Light', Arial, sans-serif;
     height: 70px;
-    /*border-radius: 10px;*/
     align-items: center; /* Выравнивание элементов по вертикали */
 }
 
-/* убираем отступы и поля, а также list-style для "ul",
- * и добавляем "position:relative" */
 nav ul {
     padding:0;
     margin:0;
@@ -463,7 +447,7 @@ nav ul ul {
     }
 
     .header__link.active {
-        border-left: 3px solid #6C4795; /* Подчеркивание для активного пункта */
+        border-left: 3px solid #6C4795; /* подчеркивание для активного */
     }
 }
 
@@ -476,11 +460,7 @@ nav ul ul {
     margin-left: 5px;
 }
 
-
-
-
 .slider__container {
-    /* Стили для контейнера слайдера */
     position: relative;
     margin: auto;
     width: 100%;
@@ -488,12 +468,10 @@ nav ul ul {
 }
 
 .slider__slide {
-    /* Стили для слайдов */
     display: none;
 }
 
 .slider__slide--active {
-    /* Модификатор для активного слайда */
     display: block;
 }
 
@@ -555,20 +533,14 @@ nav ul ul {
     }
 }
 
-
-
 /* 2 раздел */
 .flowers-selection__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    color: #000000;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 40px;
     padding-bottom: 40px;
 }
 
-.flowers-selection__container-title {
-    padding-right: 150px;
-}
 
 .flowers-selection__description {
     display: flex;
@@ -580,8 +552,8 @@ nav ul ul {
     padding-bottom: 20px;
 }
 
-.flowers-selection__products {
-    background-color: #ffffff;
+.flowers-selection__product-description h5 {
+    font-family: 'Circe Regular', Arial, sans-serif;
 }
 
 .flowers-selection__products {
@@ -627,7 +599,6 @@ nav ul ul {
     border-radius: 18px;
     border: 1px solid #000000;
     margin-right: 10px;
-
     width: 100%;
 }
 
@@ -637,23 +608,24 @@ nav ul ul {
     border: 1px solid #6C4795;
 }
 
-.color-white {
+.flowers-selection__product-button-more h5,
+.flowers-selection__product-button-basket h5 {
+    font-family: 'Circe Bold', Arial, sans-serif;
+}
+
+.flowers-selection__product-button-basket h5 {
     color: white;
 }
 
 @media screen and (max-width: 1100px) {
     .flowers-selection__products {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 40px;
     }
 }
 
 @media screen and (max-width: 900px) {
     .flowers-selection__products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 30px 10px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -665,6 +637,10 @@ nav ul ul {
         padding-bottom: 20px;
 
         color: #000000;
+    }
+
+    .flowers-selection__products {
+        grid-gap: 30px 10px;
     }
 
     .flowers-selection__container-title {
@@ -679,17 +655,6 @@ nav ul ul {
 
     .flowers-selection__product-description {
         padding-bottom: 10px;
-    }
-
-    .flowers-selection__products {
-        background-color: #ffffff;
-    }
-
-    .flowers-selection__products {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px 10px;
-        align-items: center;
     }
 
     .flowers__product-card {
@@ -747,6 +712,12 @@ nav ul ul {
 
 
 /* 4 раздел каталог */
+.catalog__container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 40px;
+    padding-bottom: 40px;
+}
 
 .catalog__categories {
     display: grid;
@@ -789,40 +760,23 @@ nav ul ul {
 }
 
 .catalog-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 10px 0;
-    border-radius: 18px;
-    border: 1px solid #000000;
-    margin-right: 10px;
-
     width: 150px;
 }
 
 @media screen and (max-width: 1100px) {
     .catalog__categories {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 40px 30px;
+        grid-template-columns: repeat(4, 1fr);
     }
-
 }
 
 @media screen and (max-width: 900px) {
     .catalog__categories {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 40px 30px;
+        grid-template-columns: repeat(3, 1fr);
     }
-
 }
 
 @media screen and (max-width: 600px) {
     .catalog__categories {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px 10px;
     }
 
@@ -881,9 +835,45 @@ nav ul ul {
     padding-bottom: 10px;
 }
 
+.about-us__icon-text h4 {
+    font-family: 'Circe Regular', Arial, sans-serif;
+}
+
 
 .about-us__icon-text img {
     margin-right: 10px;
+}
+
+.about-us-address__container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 40px;
+    padding-bottom: 40px;
+}
+
+.about-us-address__container-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px; /* Задает закругление углов на 18 пикселей */
+}
+
+.about-us-address__container-item_description {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: inherit; /* наследуем значение border-radius от родительского элемента */
+}
+
+.about-us-address__container-item-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit; /* наследуем значение border-radius от родительского элемента */
 }
 
 @media screen and (max-width: 1100px) {
@@ -933,46 +923,7 @@ nav ul ul {
         margin-bottom: 20px;
         margin-right: 0;
     }
-}
 
-
-.about-us-address__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-
-    /*background-color: #F0F0F0;*/
-}
-
-.about-us-address__container-item {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 18px; /* Задает закругление углов на 18 пикселей */
-}
-
-.about-us-address__container-item_description {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #000000;
-    padding: 20px;
-    border-radius: inherit; /* наследуем значение border-radius от родительского элемента */
-}
-
-.about-us-address__container-item-map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit; /* наследуем значение border-radius от родительского элемента */
-}
-
-/* здесь стоит только добавить для мобильной версии, т.к. раздел скромный
-и для планшета и ноутбука будет выглядеть одинаково хорошо */
-
-@media screen and (max-width: 600px) {
     .about-us-address__container {
         display: grid;
         grid-template-columns: 1fr;
@@ -1002,6 +953,12 @@ nav ul ul {
 
 
 /* 5 раздел вопрос-ответ */
+.faq__container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 40px;
+    padding-bottom: 40px;
+}
 
 .faq {
     display: flex;
@@ -1104,6 +1061,7 @@ nav ul ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 40px;
+    gap: 40px;
 }
 
 .reviews-selection__description {
@@ -1133,6 +1091,7 @@ nav ul ul {
     border: 1px solid #e6e6e6;
     border-radius: 18px;
     box-sizing: border-box;
+
 }
 
 .reviews__container-map a {
@@ -1340,6 +1299,66 @@ ul {
     }
 }
 
+.blog__container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 40px;
+    padding-bottom: 40px;
+}
+
+.blog__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 40px;
+    padding-bottom: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    .blog__content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .blog__content {
+        grid-template-columns: 1fr;
+        padding-bottom: 40px;
+    }
+}
+
+.blog__card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 20px
+}
+
+.blog__card-image {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border-radius: 18px;
+    overflow: hidden; /* Скрыть части изображения, выходящие за пределы */
+}
+
+.blog__card-image img {
+    display: block; /* Убрать отступы */
+    width: 100%; /* Ширина 100% от родительского контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    object-fit: cover; /* Изображение будет обрезано по размеру контейнера */
+}
+
+.blog__card-description {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blog__card-description h4 {
+    font-weight: 5;
+}
+
 /* 7 раздел - разработчик сайта */
 .developer-info {
     padding: 20px 80px 40px 80px;
@@ -1453,9 +1472,6 @@ ul {
     text-align: right;
     font-weight: 400;
 }
-
-
-
 
 .footer__content {
     display: grid;
