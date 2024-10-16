@@ -7,7 +7,7 @@ function highlightActiveMenuItem() {
         "reviews.html": ["ОТЗЫВЫ"],
     };
 
-    // Получаем все элементы меню
+    // получаем все элементы меню
     let menuItems = document.querySelectorAll(".header__link");
 
     menuItems.forEach(item => {
@@ -19,5 +19,5 @@ function highlightActiveMenuItem() {
     });
 }
 
-// Вызываем функцию после загрузки контента страницы
+// вызываем функцию после загрузки контента страницы
 document.addEventListener("DOMContentLoaded", highlightActiveMenuItem);
