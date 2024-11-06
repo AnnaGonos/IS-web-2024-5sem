@@ -8,6 +8,7 @@
 
 ## Макет сайта
 
+
 ![alt text](https://github.com/AnnaGonos/IS-web-2024-5sem/blob/lab-2/images/desktop-main.png)
 
 ## Цветовая схема 
