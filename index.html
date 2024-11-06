@@ -14,6 +14,9 @@
     оформлению мероприятий. Выбирайте самые красивые и свежие цветы для любого повода!">
     <link rel="stylesheet" href="css/outlines.css">
     <link rel="icon" type="image/png" href="images/logotype.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/clickerSlider.js"></script>
 
     <script src="js/loadTime.js" defer></script>
     <script src="js/domActive.js" defer></script>
@@ -164,42 +167,103 @@
 
 <main>
 
-    <section class="slider">
-        <!-- Основной контейнер для слайдера -->
-        <div class="slider__container">
-            <!-- Первый слайд -->
-            <div class="slider__slide slider__slide--active">
-                <div class="slider__number">1 / 4</div>
-                <img class="slider__image" src="images/slides/slide-1.bmp" alt="Slide 1">
-                <div class="slider__caption">Слайд 1</div>
+    <section class="wrapper-class">
+        <div class="wrapper">
+            <div class="image-slider swiper-container">
+                <!-- Обязательная оболочка -->
+                <div class="image-slider__wrapper swiper-wrapper">
+                    <div data-hash="slide-1" class="image-slider__slide swiper-slide">
+                        <div class="image-slider__image">
+                            <img src="images/bouquet/bouquet-14.jpg" alt="Заставка 1">
+
+                            <div class="image-slider__description">
+                                <h1>ЛАВАНДА</h1>
+                                <p>Цветочный магазин</p><br>
+
+                                <a href="#" class="image-slider__description-button-more">
+                                    <h5>ПОДРОБНЕЕ</h5>
+                                </a>
+                            </div>
+                            <img src="images/bouquet/orig.jpg" alt="Заставка 1">
+                        </div>
+                    </div>
+                    <div data-hash="slide-2" class="image-slider__slide swiper-slide">
+                        <div class="image-slider__image">
+                            <img src="images/bouquet/bouquet-1.jpg" alt="Заставка 1">
+                            <div class="image-slider__description">
+                                <h1>АКЦИИ НЕДЕЛИ</h1>
+                                <p>Скидки и предложения</p><br>
+
+                                <a href="#" class="image-slider__description-button-more">
+                                    <h5>ПОДРОБНЕЕ</h5>
+                                </a>
+                            </div>
+                            <img src="images/bouquet/bouquet-2.jpg" alt="Заставка 1">
+                        </div>
+                    </div>
+                    <div data-hash="slide-3" class="image-slider__slide swiper-slide">
+                        <div class="image-slider__image">
+                            <img src="https://avatars.mds.yandex.net/get-altay/1987173/2a000001746357717f3c659ebb67616e2bfc/L" alt="Заставка 1">
+
+                            <div class="image-slider__description">
+                                <h1>БЛОГ</h1>
+                                <p>Будь в центре новостей</p><br>
+
+                                <a href="#" class="image-slider__description-button-more">
+                                    <h5>ПОДРОБНЕЕ</h5>
+                                </a>
+                            </div>
+                            <img src="https://avatars.mds.yandex.net/get-altay/2384989/2a000001746357580e54e69682ad061e1a55/XXXL" alt="Заставка 1">
+                        </div>
+                    </div>
+                    <div data-hash="slide-4" class="image-slider__slide swiper-slide">
+                        <div class="image-slider__image">
+                            <img src="https://avatars.mds.yandex.net/get-altay/927353/2a000001854921cb12b30c2996cc2ebc1276/XXXL" alt="Заставка 1">
+
+                            <div class="image-slider__description">
+                                <h1>ЦВЕТОЧНЫЕ ТРЕНДЫ 2024</h1>
+                                <p>Следите за самыми модными композициями</p><br>
+
+                                <a href="#" class="image-slider__description-button-more">
+                                    <h5>ПОДРОБНЕЕ</h5>
+                                </a>
+                            </div>
+                            <img src="https://avatars.mds.yandex.net/get-altay/2447509/2a00000174635781945fce7ad1ae93da5943/XXXL" alt="Заставка 1">
+                        </div>
+                    </div>
+                    <div data-hash="slide-5" class="image-slider__slide swiper-slide">
+                        <div class="image-slider__image">
+                            <img src="images/bouquet/bouquet-15.jpg" alt="Заставка 1">
+
+                            <div class="image-slider__description">
+                                <h1>ПОДАРКИ НА 8 МАРТА</h1>
+                                <p>Топ-5 лучших идей для цветочного подарка</p><br>
+
+                                <a href="#" class="image-slider__description-button-more">
+                                    <h5>ПОДРОБНЕЕ</h5>
+                                </a>
+                            </div>
+                            <img src="images/bouquet/bouquet-10.jpg" alt="Заставка 1">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Кнопки навигации -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <br><br>
+                <!-- Пагинация -->
+                <!--            <div class="swiper-pagination"></div>-->
+                <div class="swiper-scrollbar"></div>
             </div>
-            <!-- Второй слайд -->
-            <div class="slider__slide">
-                <div class="slider__number">2 / 4</div>
-                <img class="slider__image" src="images/slides/slide-2.bmp" alt="Slide 2">
-                <div class="slider__caption">Слайд 2</div>
-            </div>
-            <!-- Третий слайд -->
-            <div class="slider__slide">
-                <div class="slider__number">3 / 4</div>
-                <img class="slider__image" src="images/slides/slide-3.bmp" alt="Slide 3">
-                <div class="slider__caption">Слайд 3</div>
-            </div>
-            <!-- Четвертый слайд -->
-            <div class="slider__slide">
-                <div class="slider__number">4 / 4</div>
-                <img class="slider__image" src="images/slides/slide-4.bmp" alt="Slide 4">
-                <div class="slider__caption">Слайд 4</div>
-            </div>
-        </div>
-        <!-- Контейнер для точек-индикаторов -->
-        <div class="slider__dots">
-            <span class="slider__dot slider__dot--active"></span>
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
         </div>
     </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <script src="js/clickerSlider.js"></script>
+
 
     <script src="js/clickerSlide.js" defer></script>
 

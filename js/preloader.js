@@ -14,7 +14,7 @@ function fetchCommentsUsingPromise() {
     return new Promise((resolve, reject) => {
         const randomFilter = Math.random() < 0.5 ? 100 : 200;
 
-        fetch(`https://jsonplaceholder.typicode.com/comments?_limit=20&_page=1`)
+        fetch(`https://jsonplaceholder.typicode.comy/comments?_limit=20&_page=1`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorImage.classList.add('error-image');
 
             const errorMessage = document.createElement('p');
-            errorMessage.textContent = '⚠️ Что-то пошло не так';
+            errorMessage.textContent = '⚠️ Что-то пошло не так 📵';
             errorMessage.classList.add('error-message');
 
             commentsContainer.appendChild(errorImage);
