@@ -46,36 +46,35 @@ document.addEventListener("DOMContentLoaded", () => {
             saveReview(newReview);
             addReviewToList(newReview);
             reviewForm.reset();
-            reviewForm.style.display = "none"; // Скрываем форму
-            leaveReviewBtn.style.display = "block"; // Показываем кнопку
+            reviewForm.style.display = "none";
+            leaveReviewBtn.style.display = "block";
         });
     });
 
-    // Функция для добавления отзыва в список
+
     function addReviewToList({ name, email, reviewText, images, date }) {
         const li = document.createElement("li");
-        li.className = "review"; // Установка класса для стилизации
+        li.className = "review";
 
-        // Если есть изображения, создаем контейнер для изображения
+
         if (images.length > 0) {
             const imageContainer = document.createElement("div");
             const img = document.createElement("img");
             img.src = images[0];
-            img.className = "review-image"; // Установка класса для стилизации
+            img.className = "review-image";
             imageContainer.appendChild(img);
             li.appendChild(imageContainer);
         }
 
-        // создаем контейнер для текста
+
         const contentDiv = document.createElement("div");
         contentDiv.className = "review-content";
         contentDiv.innerHTML = `
         <h4>${name} (${email})</h4>
-        ${date ? `<h5>${date}</h5>` : ''} <!-- Отображать дату только если она есть -->
+        ${date ? `<h5>${date}</h5>` : ''}
         <p>${reviewText}</p>
     `;
 
-        // обавляем текст в список
         li.appendChild(contentDiv);
         reviewsList.appendChild(li);
     }
