@@ -16,6 +16,9 @@
 
     <script src="../../js/loadTime.js" defer></script>
     <script src="../../js/domActive.js" defer></script>
+
+    <script src="../../js/preloader.js" defer></script>
+
 </head>
 <body>
 <header>
@@ -37,7 +40,6 @@
         </div>
     </section>
     <hr class="divider">
-
 
     <section class="header__navigation-section">
         <div class="header__logo-block">
@@ -185,7 +187,8 @@
                 <textarea id="review" required></textarea>
                 <label for="imageUpload">Добавить изображения:</label>
                 <div class="file-upload">
-                    <input type="file" id="imageUpload" class="file-input" accept="image/*" multiple onchange="updateFileName()">
+                    <input type="file" id="imageUpload" class="file-input" accept="image/*" multiple
+                           onchange="updateFileName()">
                     <label for="imageUpload" class="custom-file-upload">
                         Выбор файлов
                     </label>
@@ -198,9 +201,14 @@
         <div class="reviews__container">
             <h2 class="reviews__container-title">ОТЗЫВЫ</h2>
         </div>
+        <div id="loaderImage"></div>
+
         <div id="reviewsContainer">
             <ul id="reviewsList"></ul>
         </div>
+
+        <div id="errorMessage"></div>
+        <div id="comments"></div>
 
         <script src="../../js/reviewSend.js"></script>
     </section>
@@ -216,13 +224,15 @@
 
             <div class="header__order-time">
                 <img src="../../icons/map.svg" alt="Часы" width="16" height="16">
-                <span class="header__text text-black"><a class="footer__nav-link" href="https://yandex.ru/maps/-/CDDCmGp2">ул. Замараева, 5, Партизанск</a></span>
+                <span class="header__text text-black"><a class="footer__nav-link"
+                                                         href="https://yandex.ru/maps/-/CDDCmGp2">ул. Замараева, 5, Партизанск</a></span>
             </div>
 
             <div class="footer__social-links">
-                <a href="https://chatwith.io/s/789681393338"><img src="../../icons/whatsapp.svg" alt="Ссылка на WhatsApp"></a>
+                <a href="https://chatwith.io/s/789681393338"><img src="../../icons/whatsapp.svg"
+                                                                  alt="Ссылка на WhatsApp"></a>
                 <a href="https://t.me/gonosanna"><img src="../../icons/telegram.svg" alt="Ссылка на Telegram"></a>
-                <a href="https://vk.com/gonosanna"><img src="../../icons/vk.svg" alt="WhatsApp" ></a>
+                <a href="https://vk.com/gonosanna"><img src="../../icons/vk.svg" alt="WhatsApp"></a>
             </div>
         </div>
         <div class="footer__content-item">

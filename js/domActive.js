@@ -19,5 +19,5 @@ function highlightActiveMenuItem() {
     });
 }
 
-// вызываем функцию после загрузки контента страницы
+
 document.addEventListener("DOMContentLoaded", highlightActiveMenuItem);

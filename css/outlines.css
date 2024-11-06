@@ -19,67 +19,37 @@
     src: url('fonts/Circe/Circe-Bold.ttf') format('truetype');
 }
 
-h1 {
-    font-size: 36px;
+h1, h2, h3, h4, h5, p {
     font-weight: 400;
     font-family: 'Circe Light', Arial, sans-serif;
     color: #000000;
     margin: 0;
 }
 
+h1 {
+    font-size: 36px;
+}
 h2 {
     font-size: 32px;
-    font-weight: 400;
-    font-family: 'Circe Light', Arial, sans-serif;
-    color: #000000;
-    margin: 0;
 }
 
 h3 {
     font-size: 25px;
-    font-weight: 400;
-    font-family: 'Circe Light', Arial, sans-serif;
-    color: #000000;
-    margin: 0;
 }
 
 h4 {
     font-size: 22px;
-    font-weight: 400;
-    font-family: 'Circe Light', Arial, sans-serif;
-    color: #000000;
-    margin: 0;
 }
 
-h5 {
+h5, p {
     font-size: 14px;
-    font-weight: 400;
-    font-family: 'Circe Light', Arial, sans-serif;
-    color: #000000;
-    margin: 0;
-}
-
-p {
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'Circe Light', Arial, sans-serif;
-    margin: 0;
 }
 
 a {
-    text-decoration: none; /* убираем стандартное подчеркивание */
-    color: inherit; /* !!возвращаем цвет текста к наследуемому */
-    outline: none; /* убрала дебильное синее выделение при фокусе */
+    text-decoration: none;
+    color: inherit;
+    outline: none;
 }
-
-.font-regular {
-    font-family: 'Circe Regular', Arial, sans-serif;
-}
-
-.font-bold {
-    font-family: 'Circe Bold', Arial, sans-serif;
-}
-
 
 html, body {
     height: 100%;
@@ -92,7 +62,7 @@ body {
 }
 
 main {
-    flex: 1; /* Основной контент занимает доступное пространство */
+    flex: 1;
 }
 
 footer {
@@ -129,11 +99,7 @@ main {
         font-size: 16px;
     }
 
-    h5 {
-        font-size: 12px;
-    }
-
-    p {
+    h5, p {
         font-size: 12px;
     }
 
@@ -242,7 +208,6 @@ main {
 
 .header__menu-list {
     z-index: 1;
-/*    Управлять порядком наложения блоков мы как раз и можем при помощи z-index https://doka.guide/css/z-index/*/
 }
 
 .header__logo {
@@ -255,15 +220,17 @@ main {
     height: 100px;
 }
 
+.header__search-links,
 .header__search-and-actions {
     display: flex;
     align-items: center;
+}
+
+.header__search-and-actions {
     justify-content: flex-end;
 }
 
 .header__search-links {
-    display: flex;
-    align-items: center;
     gap: 20px;
 }
 
@@ -322,11 +289,10 @@ main {
 }
 
 .header__menu {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
+.header__menu,
 .header__menu-list {
     display: flex;
     align-items: center;
@@ -341,23 +307,22 @@ main {
 
 .header__list-item {
     margin-right: 30px;
-
 }
 
 .header__link.active h5 {
     color: #6C4795;
     font-weight: bold;
-    text-decoration: none; /* Убираем нижнее подчеркивание */
+    text-decoration: none;
 }
 
-.header__link h5:hover{
+.header__link h5:hover {
     color: #D5B8F1;
     font-weight: bold;
     text-decoration: none;
 }
 
 .header__menu-list .header__list-item .header__link.active {
-    border-bottom: 3px solid #6C4795; /* Подчеркивание для активного пункта */
+    border-bottom: 3px solid #6C4795;
 }
 
 .header__menu-toggle {
@@ -1728,3 +1693,175 @@ table tr:nth-child(even) {
     width: 350px;
 }
 
+/* ошибка загрузки*/
+.error-message {
+    display: flex;
+    justify-content: center;
+    text-align: center;  /* Центрирование текста */     /* Цвет текста (можно изменить) */
+    font-size: 16px;     /* Размер шрифта (можно изменить) */
+      /* Отступ сверху */
+    padding-top: 50px;
+    margin-bottom: 300px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.error-image {
+    width: 200px;
+    height: auto;
+    border-radius: 18px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    padding: 80px 80px 40px 80px;
+}
+
+.error-image {
+    background-color: rgba(213, 184, 241, 0.1);
+    border: 1px solid rgba(213, 184, 241, 1);
+}
+
+.error-image:last-child {
+    width: 210px;
+    height: auto;
+    border-radius: 18px;
+    margin-top: 150px;
+    margin-bottom: 70px;
+}
+
+/* анимация */
+.bubblingG {
+    text-align: center;
+    width:100px;
+    height:63px;
+    margin: auto;
+}
+
+.bubblingG span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    margin: 31px auto;
+    background: rgb(108,71,149);
+    border-radius: 63px;
+    -o-border-radius: 63px;
+    -ms-border-radius: 63px;
+    -webkit-border-radius: 63px;
+    -moz-border-radius: 63px;
+    animation: bubblingG 0.905s infinite alternate;
+    -o-animation: bubblingG 0.905s infinite alternate;
+    -ms-animation: bubblingG 0.905s infinite alternate;
+    -webkit-animation: bubblingG 0.905s infinite alternate;
+    -moz-animation: bubblingG 0.905s infinite alternate;
+}
+
+#bubblingG_1 {
+    animation-delay: 0s;
+    -o-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+}
+
+#bubblingG_2 {
+    animation-delay: 0.2695s;
+    -o-animation-delay: 0.2695s;
+    -ms-animation-delay: 0.2695s;
+    -webkit-animation-delay: 0.2695s;
+    -moz-animation-delay: 0.2695s;
+}
+
+#bubblingG_3 {
+    animation-delay: 0.549s;
+    -o-animation-delay: 0.549s;
+    -ms-animation-delay: 0.549s;
+    -webkit-animation-delay: 0.549s;
+    -moz-animation-delay: 0.549s;
+}
+
+
+
+@keyframes bubblingG {
+    0% {
+        width: 13px;
+        height: 13px;
+        background-color:rgb(108,71,149);
+        transform: translateY(0);
+    }
+
+    100% {
+        width: 30px;
+        height: 30px;
+        background-color:rgb(255,255,255);
+        transform: translateY(-26px);
+    }
+}
+
+@-o-keyframes bubblingG {
+    0% {
+        width: 13px;
+        height: 13px;
+        background-color:rgb(108,71,149);
+        -o-transform: translateY(0);
+    }
+
+    100% {
+        width: 30px;
+        height: 30px;
+        background-color:rgb(255,255,255);
+        -o-transform: translateY(-26px);
+    }
+}
+
+@-ms-keyframes bubblingG {
+    0% {
+        width: 13px;
+        height: 13px;
+        background-color:rgb(108,71,149);
+        -ms-transform: translateY(0);
+    }
+
+    100% {
+        width: 30px;
+        height: 30px;
+        background-color:rgb(255,255,255);
+        -ms-transform: translateY(-26px);
+    }
+}
+
+@-webkit-keyframes bubblingG {
+    0% {
+        width: 13px;
+        height: 13px;
+        background-color:rgb(108,71,149);
+        -webkit-transform: translateY(0);
+    }
+
+    100% {
+        width: 30px;
+        height: 30px;
+        background-color:rgb(255,255,255);
+        -webkit-transform: translateY(-26px);
+    }
+}
+
+@-moz-keyframes bubblingG {
+    0% {
+        width: 13px;
+        height: 13px;
+        background-color:rgb(108,71,149);
+        -moz-transform: translateY(0);
+    }
+
+    100% {
+        width: 30px;
+        height: 30px;
+        background-color:rgb(255,255,255);
+        -moz-transform: translateY(-26px);
+    }
+}
