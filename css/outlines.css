@@ -110,9 +110,7 @@ main {
     section {
         padding: 0 20px 40px 20px;
     }
-
 }
-
 
 .header__info-section {
     padding: 0 80px 0 80px;
@@ -131,7 +129,6 @@ main {
     border-radius: 18px;
     align-items: center;
 }
-
 
 @media screen and (max-width: 900px) {
     .header__info-section {
@@ -359,7 +356,7 @@ nav {
     font-weight: 400;
     font-family: 'Circe Light', Arial, sans-serif;
     height: 70px;
-    align-items: center; /* Выравнивание элементов по вертикали */
+    align-items: center;
 }
 
 nav ul {
@@ -369,7 +366,6 @@ nav ul {
     position: relative;
 }
 
-/* применяем inline-block позиционирование к элементам навигации */
 nav ul li {
     margin: 0 7px 0 0;
     font-weight: 550;
@@ -377,7 +373,6 @@ nav ul li {
     background-color: #D5B8F1;
 }
 
-/* стилизуем ссылки */
 nav a {
     display:block;
     padding:0 10px;
@@ -387,7 +382,6 @@ nav a {
     text-decoration:none;
 }
 
-/* изменяем цвет фона при наведении курсора */
 nav a:hover {
     background-color: #6C4795;
 }
@@ -753,7 +747,6 @@ nav ul ul {
     }
 }
 
-/* 5 раздел о нас/о компании */
 .about-us__container {
     display: flex;
     flex-direction: row;
@@ -820,7 +813,7 @@ nav ul ul {
     position: relative;
     width: 100%;
     overflow: hidden;
-    border-radius: 18px; /* Задает закругление углов на 18 пикселей */
+    border-radius: 18px;
 }
 
 .about-us-address__container-item_description {
@@ -828,7 +821,7 @@ nav ul ul {
     flex-direction: column;
     border: 1px solid #000000;
     padding: 20px;
-    border-radius: inherit; /* наследуем значение border-radius от родительского элемента */
+    border-radius: inherit;
 }
 
 .about-us-address__container-item-map {
@@ -838,7 +831,7 @@ nav ul ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: inherit; /* наследуем значение border-radius от родительского элемента */
+    border-radius: inherit;
 }
 
 @media screen and (max-width: 1100px) {
@@ -856,7 +849,7 @@ nav ul ul {
     .about-us__container-image-content {
         position: relative;
         width: 100%;
-        padding-bottom: 60%; /* устанавливаем отношение сторон  */
+        padding-bottom: 60%;
         overflow: hidden;
         align-items: center;
     }
@@ -894,23 +887,19 @@ nav ul ul {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         grid-gap: 10px;
-        /* устанавливаем сетку из 1 колонки и 2 строк */
     }
 
     .about-us-address__container-item {
         margin-bottom: 10px;
     }
 
-
     .about-us-address__container-item:first-child {
         order: 2;
         margin-bottom: 0;
-        /* меняем порядок отображения, чтобы описание было ниже карты.*/
     }
 
     .about-us-address__container-item-map {
         position: static;
-        /* убираем абсолютное позиционирование карты */
         height: auto;
         border-radius: inherit;
     }
@@ -938,7 +927,6 @@ nav ul ul {
     grid-gap: 20px 40px;
 }
 
-
 .flower__faq-item {
     display: flex;
     flex-direction: column;
@@ -950,7 +938,6 @@ nav ul ul {
     position: relative;
     display: flex;
     flex-direction: column;
-
     padding: 10px 30px 10px 10px;
     font-size: 18px;
     font-weight: 400;
@@ -986,8 +973,6 @@ nav ul ul {
     background-color: white;
 }
 
-
-
 .flower__faq-answer {
     opacity: 0;
     max-height: 0;
@@ -1018,9 +1003,6 @@ nav ul ul {
         grid-gap: 10px;
     }
 }
-
-/* 6 раздел - ревью */
-
 
 .reviews__container {
     display: grid;
@@ -1097,7 +1079,7 @@ nav ul ul {
 }
 
 .reviews__rating-item:last-child {
-    margin-bottom: 0; /* Убираем отступ для последней иконки */
+    margin-bottom: 0;
 }
 
 .reviews__form {
@@ -1118,30 +1100,28 @@ nav ul ul {
 }
 
 .file-input {
-    opacity: 0; /* Скрыть реальный элемент */
-    cursor: pointer; /* Курсор указывает на действие */
+    opacity: 0;
+    cursor: pointer;
 }
 
 .custom-file-upload {
     display: inline-block;
-    border: 1px solid #ccc; /* Ободок кнопки */
-    border-radius: 4px; /* Скругленные углы */
-    background-color: #f8f8f8; /* Цвет фона кнопки */
-    cursor: pointer; /* Курсор для кнопки */
-    text-align: center; /* Центрирование текста */
-    transition: background-color 0.2s; /* Переход для фона кнопки */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
 }
 
 .custom-file-upload:hover {
-    background-color: #e0e0e0; /* Цвет фона при наведении */
+    background-color: #e0e0e0;
 }
-
-
 
 #reviewForm label,
 #reviewForm input,
 #reviewForm textarea {
-    display: block; /* Устанавливаем каждый элемент на новую строку */
+    display: block;
     width: 100%;
 }
 
@@ -1150,7 +1130,7 @@ nav ul ul {
 }
 
 .buttonReview {
-    display: flex; /* Устанавливаем каждый элемент на новую строку */
+    display: flex;
 }
 
 #leaveReviewBtn {
@@ -1162,7 +1142,7 @@ nav ul ul {
 }
 
 #reviewForm label {
-    padding-top: 20px; /* Отступ между элементами */
+    padding-top: 20px;
 }
 
 #reviewForm label:last-child {
@@ -1172,7 +1152,7 @@ nav ul ul {
 
 
 #reviewForm button {
-    display: block; /* Устанавливаем каждый элемент на новую строку */
+    display: block;
     width: 100%;
     padding: 10px;
     background-color: #D5B8F1;
@@ -1186,9 +1166,9 @@ nav ul ul {
 }
 
 ul {
-    list-style-type: none; /* Убираем маркеры у списка */
-    padding: 0;           /* Убираем внутренние отступы */
-    margin: 0;            /* Убираем внешние отступы */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .review {
@@ -1199,7 +1179,7 @@ ul {
 }
 
 .review-image {
-    width: 200px; /* Установка ширины изображения */
+    width: 200px;
     height: auto;
     border-radius: 18px;
 }
@@ -1208,11 +1188,9 @@ ul {
     flex: 1;
 }
 
-
 .review-content p {
     margin-top: 20px;
 }
-
 
 @media screen and (max-width: 900px) {
     .reviews__container {
@@ -1228,7 +1206,6 @@ ul {
     .reviews__container-item:first-child {
         order: 2;
         margin-bottom: 0;
-        /* меняем порядок отображения, чтобы описание было ниже карты.*/
     }
 
     .reviews__rating-item {
@@ -1243,7 +1220,7 @@ ul {
         padding: 20px;
 
         height: 50%;
-        margin-bottom: 20px; /* Отступ справа для каждой иконки */
+        margin-bottom: 20px;
     }
 }
 
@@ -1304,14 +1281,14 @@ ul {
     width: 100%;
     height: 200px;
     border-radius: 18px;
-    overflow: hidden; /* Скрыть части изображения, выходящие за пределы */
+    overflow: hidden;
 }
 
 .blog__card-image img {
-    display: block; /* Убрать отступы */
-    width: 100%; /* Ширина 100% от родительского контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    object-fit: cover; /* Изображение будет обрезано по размеру контейнера */
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .blog__card-description {
@@ -1324,7 +1301,6 @@ ul {
     font-weight: 5;
 }
 
-/* 7 раздел - разработчик сайта */
 .developer-info {
     padding: 20px 80px 40px 80px;
     background-color: #F7FEB5;
@@ -1332,7 +1308,7 @@ ul {
 
 .developer-info__ascii-art {
     font-family: monospace;
-    color: #000000; /* Цвет под фиолетовую тему "Лаванда" */
+    color: #000000;
     text-align: left;
     font-size: 7px;
 }
@@ -1390,17 +1366,16 @@ ul {
     justify-content: space-between;
     border-radius: 18px;
     border: 1.5px solid #000000;
-
     padding: 10px 20px 10px 20px;
-    width: 100px; /* Ширина блока 100px */
+    width: 100px;
 }
 
 .developer-info__contact a {
-    margin-right: 20px; /* Отступ справа для каждой иконки */
+    margin-right: 20px;
 }
 
 .developer-info__contact a:last-child {
-    margin-right: 0; /* Убираем отступ для последней иконки */
+    margin-right: 0;
 }
 
 .developer-info__contact img {
@@ -1410,7 +1385,7 @@ ul {
 
 .footer__nav-link {
     color: black;
-    text-decoration: none; /* убираем подчеркивание */
+    text-decoration: none;
     border-bottom: dashed;
     text-align: left;
     font-size: 14px;
@@ -1443,7 +1418,6 @@ ul {
     grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
-
 
 .footer__content-item {
     display: flex;
@@ -1481,7 +1455,7 @@ ul {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center; /* Добавлено свойство для вертикального выравнивания */
+    align-items: center;
     border-radius: 18px;
     border: 1.5px solid #000000;
     margin-top: 20px;
@@ -1490,11 +1464,11 @@ ul {
 }
 
 .footer__social-links a {
-    margin-right: 10px; /* Отступ справа для каждой иконки */
+    margin-right: 10px;
 }
 
 .footer__social-links a:last-child {
-    margin-right: 0; /* Убираем отступ для последней иконки */
+    margin-right: 0;
 }
 
 .footer__social-links img {
@@ -1584,8 +1558,8 @@ ul {
 }
 
 table {
-    border-collapse: collapse; /* Объединяет границы ячеек таблицы */
-    width: 100%; /* Устанавливает ширину таблицы на 100% */
+    border-collapse: collapse;
+    width: 100%;
 }
 
 table caption {
@@ -1664,7 +1638,6 @@ table tr:nth-child(even) {
     justify-content: flex-start;
     padding: 10px 15px 10px 15px;
     border-radius: 18px;
-    /*background-color: rgba(213, 184, 241, 0.39);*/
     border: 1.5px solid #000000;
 }
 
@@ -1708,9 +1681,8 @@ table tr:nth-child(even) {
 .error-message {
     display: flex;
     justify-content: center;
-    text-align: center;  /* Центрирование текста */     /* Цвет текста (можно изменить) */
-    font-size: 16px;     /* Размер шрифта (можно изменить) */
-      /* Отступ сверху */
+    text-align: center;
+    font-size: 16px;
     padding-top: 50px;
     margin-bottom: 300px;
 }
@@ -1895,10 +1867,8 @@ table tr:nth-child(even) {
 .image-slider {
     position: relative;
     width: 100%;
-    height: 400px; /* Убедитесь, что высота задана */
+    height: 400px;
 }
-
-
 
 .image-slider__wrapper {
     margin-bottom: 40px;
@@ -1906,7 +1876,7 @@ table tr:nth-child(even) {
 }
 
 .swiper-slide {
-    display: flex; /* Так содержимое будет по центру */
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -1942,9 +1912,9 @@ table tr:nth-child(even) {
 }
 
 .image-slider__image {
-    display: flex; /* Устанавливаем flex-контейнер для центрирования */
-    justify-content: center; /* Центрируем по горизонтали */
-    align-items: center; /* Центрируем по вертикали */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     gap: 60px;
 }
@@ -1986,10 +1956,10 @@ table tr:nth-child(even) {
 
 @media screen and (max-width: 1100px) {
     .image-slider__image {
-        display: flex; /* Устанавливаем flex-контейнер для центрирования */
-        justify-content: center; /* Центрируем по горизонтали */
-        align-items: center; /* Центрируем по вертикали */
-        height: 100%; /* Оставляем высоту на 100% слайда */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
         gap: 40px;
         margin: 0 30px;
     }
