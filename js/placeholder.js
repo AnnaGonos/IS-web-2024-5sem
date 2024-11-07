@@ -1,13 +1,13 @@
 const commentsContainer = document.getElementById('comments');
 
-const preloader = document.createElement('div');
-preloader.classList.add('bubblingG');
-preloader.innerHTML = `
+const placeholder = document.createElement('div');
+placeholder.classList.add('bubblingG');
+placeholder.innerHTML = `
   <span id="bubblingG_1"></span>
   <span id="bubblingG_2"></span>
   <span id="bubblingG_3"></span>
 `;
-commentsContainer.appendChild(preloader);
+commentsContainer.appendChild(placeholder);
 
 
 function fetchCommentsUsingPromise() {
@@ -45,7 +45,7 @@ function renderComments(comments) {
 document.addEventListener('DOMContentLoaded', () => {
     fetchCommentsUsingPromise()
         .then(data => {
-            preloader.remove();
+            placeholder.remove();
             renderComments(data);
         })
         .catch(error => {
@@ -64,6 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
             commentsContainer.appendChild(errorImage);
             commentsContainer.appendChild(errorMessage);
 
-            preloader.remove();
+            placeholder.remove();
         });
 });
