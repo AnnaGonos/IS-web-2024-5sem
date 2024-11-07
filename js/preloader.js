@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorImage.classList.add('error-image');
 
             const errorMessage = document.createElement('p');
-            errorMessage.textContent = '⚠️ Что-то пошло не так 📵';
+            errorMessage.textContent = '💀⚠️ Что-то пошло не так 📵☠️';
             errorMessage.classList.add('error-message');
 
             commentsContainer.appendChild(errorImage);
