@@ -36,7 +36,6 @@ var swiper = new Swiper('.swiper-container', {
 
     mousewheel: {
         sensitivity: 1,
-        // eventsTarget: ".image-slider"
     },
 
     autoHeight: true,
