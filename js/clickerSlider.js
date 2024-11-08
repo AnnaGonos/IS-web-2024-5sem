@@ -8,18 +8,22 @@ var swiper = new Swiper('.swiper-container', {
     //         return '<span class="' + className + '">' + (index + 1) + '</span>';
     //     },
     // },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true
     },
 
+    autoplay: {
+        delay: 3500,
+    },
+
     simulateTouch: true,
-    touchRatio: 5,
-    touchAngle: 45,
+    touchRatio: 2,
+    touchAngle: 40,
     grabCursor: true,
 
     slideToClickedSlide: true,
@@ -38,6 +42,6 @@ var swiper = new Swiper('.swiper-container', {
         sensitivity: 1,
     },
 
-    autoHeight: true,
+    // autoHeight: true,
     slidesPerView: 1,
 });

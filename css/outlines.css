@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, a {
     font-weight: 300;
     font-family: 'Raleway', sans-serif;
     color: #000000;
@@ -20,7 +20,7 @@ h4 {
     font-size: 22px;
 }
 
-h5, p {
+h5, p, a {
     font-size: 14px;
 }
 
@@ -33,7 +33,6 @@ a {
 html, body {
     height: 100%;
     width: auto;
-    margin: 8px 0 0 0 ;
 }
 
 body {
@@ -56,7 +55,7 @@ header {
 }
 
 section {
-    padding: 0 80px 60px 80px;
+    padding: 0 80px 80px 80px;
 }
 
 main {
@@ -80,7 +79,8 @@ main {
         font-size: 16px;
     }
 
-    h5, p {
+    h5, p, a {
+        font-weight: 400;
         font-size: 12px;
     }
 
@@ -97,11 +97,13 @@ main {
 .header__info-section {
     padding: 0 80px 0 80px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
 }
 
 .header__navigation-section {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     background-color: #D5B8F1;
     margin-top: 25px;
@@ -117,11 +119,16 @@ main {
         display: none;
     }
 
+    section:first-child {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
     .header__navigation-section {
         border-radius: 0;
     }
 
-    .header__navigation-section.sticky {
+    .header__navigation-section {
         position: fixed;
         top: 0;
         left: 0;
@@ -140,6 +147,11 @@ main {
         margin-right: 20px;
     }
 
+    section:first-child {
+        margin-top: 100px; !important;
+    }
+
+
     .header__navigation-section {
         padding: 0 20px 0 20px;
         border-radius: 0;
@@ -150,7 +162,7 @@ main {
 .header__info {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
 }
 
 .header__order-time,
@@ -171,7 +183,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 10px;
 }
 
 .header__text--contact {
@@ -1104,6 +1116,10 @@ nav ul ul {
 #reviewForm textarea {
     display: block;
     width: 100%;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+    margin: 0;
 }
 
 #reviewForm input:last-child {
@@ -1112,6 +1128,8 @@ nav ul ul {
 
 .buttonReview {
     display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #leaveReviewBtn {
@@ -1157,6 +1175,13 @@ ul {
     flex-direction: row;
     gap: 40px;
     margin-bottom: 60px;
+}
+
+
+
+
+#reviewForm {
+    margin-bottom: 40px;
 }
 
 .review-image {
@@ -1233,7 +1258,6 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-gap: 40px;
-    padding-bottom: 40px;
 }
 
 @media screen and (max-width: 900px) {
@@ -1275,11 +1299,7 @@ ul {
 .blog__card-description {
     display: flex;
     flex-direction: column;
-
-}
-
-.blog__card-description h4 {
-    font-weight: 5;
+    gap: 10px;
 }
 
 .developer-info {
@@ -1369,8 +1389,6 @@ ul {
     text-decoration: none;
     border-bottom: dashed;
     text-align: left;
-    font-size: 14px;
-    font-family: 'Circe Light', Arial, sans-serif;
 }
 
 .developer-info__quote {
@@ -1398,6 +1416,7 @@ ul {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+    padding-bottom: 20px;
 }
 
 .footer__content-item {
@@ -1411,7 +1430,7 @@ ul {
 @media screen and (max-width: 600px) {
     footer {
         margin-top: 40px;
-        padding: 20px 20px 40px 20px;
+        padding: 20px 20px 150px 20px;
     }
 
     .footer__content {
@@ -1455,19 +1474,6 @@ ul {
 .footer__social-links img {
     width: 16px;
     height: 16px;
-}
-
-
-
-.footer__bottom {
-    padding-top: 20px;
-}
-
-.footer__copyright{
-    color: black;
-    font-size: 13px;
-    font-weight: 100;
-    font-family: 'Circe Light', Arial, sans-serif;
 }
 
 
@@ -1837,8 +1843,6 @@ table tr:nth-child(even) {
 .wrapper-class {
     display: flex;
     min-width: 0;
-    padding: 0 80px 0 80px;
-    margin-bottom: 40px;
 }
 
 .wrapper {
@@ -1861,8 +1865,6 @@ table tr:nth-child(even) {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    background-color: #ffffff;
 }
 
 
@@ -1886,6 +1888,10 @@ table tr:nth-child(even) {
     line-height: 20px;
     font-size: 12px;
     background-color: #ffffff;
+}
+
+.swiper-wrapper {
+    padding-bottom: 150px;
 }
 
 .image-slider .swiper-scrollbar-drag {
