@@ -2020,6 +2020,7 @@ table tr:nth-child(even) {
     overflow: hidden;
     position: relative;
     padding-bottom: 0;
+    gap: 20px;
 }
 
 
