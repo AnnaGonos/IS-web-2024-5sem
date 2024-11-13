@@ -11,7 +11,7 @@ commentsContainer.appendChild(placeholder);
 
 function fetchCommentsUsingPromise() {
     return new Promise((resolve, reject) => {
-        fetch(`https://jsonplaceholder.typicode.com/comments?_limit=100&_page=1`)
+        fetch(`https://jsonplaceholder.typicode.com/comments?_limit=50&_page=1`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
