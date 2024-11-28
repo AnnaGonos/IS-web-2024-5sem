@@ -8,6 +8,11 @@
 
 ## Макет сайта
 
-![макет сайта](https://github.com/AnnaGonos/IS-web-2024-5sem/blob/main/picture/desktop-main.png)
+
+![alt text](https://github.com/AnnaGonos/IS-web-2024-5sem/blob/lab-2/images/desktop-main.png)
+
+## Цветовая схема 
+
+![Цветовая схема](https://github.com/AnnaGonos/IS-web-2024-5sem/blob/lab-2/images/Color.png)
 
 
